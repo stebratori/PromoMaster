@@ -46,7 +46,7 @@ extension HomeViewController: UISearchBarDelegate {
                             for billItem in billItems {
                                 if billItem.name.lowercased().contains(searchTextFormatted) {
                                     newArray.append(item)
-                                    break
+                                    continue
                                 }
                             }
                         }
@@ -57,7 +57,7 @@ extension HomeViewController: UISearchBarDelegate {
                     for word in words {
                         if word.lowercased().contains(searchTextFormatted) {
                             newArray.append(item)
-                            break
+                            continue
                         }
                     }
                 }
@@ -65,14 +65,14 @@ extension HomeViewController: UISearchBarDelegate {
             else if let item = item as? Visit {
                 if item.date.contains(searchTextFormatted) {
                     newArray.append(item)
-                    
+                    continue
                 }
-                else if let name = item.guest?.name,
-                   name.contains(searchTextFormatted) {
+                else if let name = item.guest?.name.lowercased(),
+                    name.contains(searchTextFormatted) {
                     newArray.append(item)
                     
                 }
-                else if let name = item.promo?.name,
+                else if let name = item.promo?.name.lowercased(),
                    name.contains(searchTextFormatted) {
                     newArray.append(item)
                     
@@ -86,7 +86,7 @@ extension HomeViewController: UISearchBarDelegate {
                     for billItem in billItems {
                         if billItem.name.lowercased().contains(searchTextFormatted) {
                             newArray.append(item)
-                            break
+                            continue
                         }
                     }
                 }

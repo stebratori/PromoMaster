@@ -16,6 +16,8 @@ class AddNewVisitViewController: UIViewController {
     @IBOutlet weak var txtPromo: UITextField!
     @IBOutlet weak var txtTable: UITextField!
     @IBOutlet weak var txtTotal: UITextField!
+    @IBOutlet weak var lblDate: UILabel!
+    @IBOutlet weak var viewBottom: UIView!
     
     @IBOutlet weak var btnAddVisit: UIButton!
     @IBOutlet weak var loader: UIActivityIndicatorView!
@@ -29,6 +31,7 @@ class AddNewVisitViewController: UIViewController {
     var table: Table?
     var billItems: [StavkaRacuna]?
     var visit: Visit?
+    var reservation: Reservation?
     var datePickerVisible: Bool = false
     var readOnly: Bool = false
     var tableViewSuggestions: UITableView?
@@ -39,6 +42,11 @@ class AddNewVisitViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UINib.init(nibName: "BillTableViewCell", bundle: nil), forCellReuseIdentifier: "BillTableViewCell")
+        if let reservation = reservation {
+            setupViewForReservation(reservation: reservation)
+        } else {
+            readOnly ? setupViewForReadOnly() : setupTextViewTapRecognisers()
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -47,7 +55,6 @@ class AddNewVisitViewController: UIViewController {
         if billItems != nil {
             setBill()
         }
-        readOnly ? setupViewForReadOnly() : setupTextViewTapRecognisers()
     }
     
     func setupTextViewTapRecognisers() {
@@ -57,28 +64,6 @@ class AddNewVisitViewController: UIViewController {
         txtGuest.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         txtPromo.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         txtTable.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
-    }
-    
-    func setupViewForReadOnly() {
-        guard let visit = visit else { return }
-        btnAddBill.isHidden = true
-        btnAddPromo.isHidden = true
-        viewFooter.isHidden = true
-        datePicker.minimumDate = Date()
-        if let guestName = visit.guest?.name {
-            txtGuest.text = guestName
-        }
-        if let promoName = visit.promo?.name {
-            txtPromo.text = promoName
-        }
-        datePicker.isHidden = true
-        if let total = visit.bill?.total.formatDigits() {
-            txtTotal.text = "Total: \(total)"
-        }
-        if let billItems = visit.bill?.billItems {
-            self.billItems = billItems
-        }
-        tableView.reloadData()
     }
     
     private func setupView() {
@@ -93,8 +78,58 @@ class AddNewVisitViewController: UIViewController {
         btnAddBill.cornerRadius()
         datePicker.cornerRadius()
         txtTotal.isEnabled = false
-        datePicker.backgroundColor = Constants.yellowLight
         tableView.reloadData()
+    }
+    
+    func setupViewForReadOnly() {
+        guard let visit = visit else { return }
+        btnAddBill.isHidden = true
+        btnAddPromo.isHidden = true
+        btnAddGuest.isHidden = true
+        viewFooter.isHidden = true
+        lblDate.text = "Date: \(visit.date)"
+        txtGuest.isEnabled = false
+        txtPromo.isEnabled = false
+        txtTable.isEnabled = false
+        txtTotal.isEnabled = false
+        datePicker.minimumDate = Date()
+        if let guestName = visit.guest?.name {
+            txtGuest.text = "Guest: \(guestName)"
+        }
+        if let promoName = visit.promo?.name {
+            txtPromo.text = "Promo: \(promoName)"
+        }
+        if let table = visit.table?.number {
+            txtTable.text = "Table: \(table)"
+        }
+        datePicker.isHidden = true
+        if let total = visit.bill?.total.formatDigits() {
+            txtTotal.text = "Total: \(total) rsd"
+        }
+        if let billItems = visit.bill?.billItems {
+            self.billItems = billItems
+        }
+        tableView.reloadData()
+    }
+    
+    func setupViewForReservation(reservation: Reservation) {
+        datePicker.isHidden = true
+        lblDate.text = "Date: \(reservation.date)"
+        lblDate.textAlignment = .left
+        if let promo = reservation.promo {
+            self.promo = promo
+            txtPromo.text = "Promo: \(promo.name)"
+            txtPromo.isEnabled = false
+            btnAddPromo.isHidden = true
+        }
+        if let table = reservation.table {
+            txtTable.text = "Table: \(table)"
+            txtTable.isEnabled = false
+        }
+        self.guest = reservation.guest
+        txtGuest.text = "Guest: \(reservation.guest.name)"
+        txtGuest.isEnabled = false
+        btnAddGuest.isHidden = true
     }
 
     @IBAction func addGuest(_ sender: UIButton) {
@@ -125,23 +160,35 @@ class AddNewVisitViewController: UIViewController {
         btnAddVisit.isEnabled = false
         guard
             let billItems = self.billItems,
-            let promo = self.promo,
             let guest = self.guest
-        else { return }
+        else {
+            self.loader.isHidden = true
+            self.btnAddVisit.isEnabled = true
+            return
+        }
+        let date = reservation?.date ?? datePicker.stringDate()
         let bill = Bill(id: UUID().uuidString.lowercased(),
-                        date: datePicker.stringDate(),
+                        date: date,
                         billItems: billItems,
                         total: getBillTotal())
         let visit = Visit(id: UUID().uuidString.lowercased(),
-                      date: datePicker.stringDate(),
+                      date: date,
                       guest: guest,
                       promo: promo,
-                      bill: bill)
+                      bill: bill,
+                      table: table ?? Table(number: "-"))
         FirebaseService().addVisit(visit: visit) { success in
             if success {
                 LocalData.shared.allBills?.append(bill)
                 LocalData.shared.allVisits?.append(visit)
-                self.performSegue(withIdentifier: "unwindHomeFromVisit", sender: self)
+                if let reservation = self.reservation {
+                    FirebaseService().deleteReservation(reservation: reservation) { success in
+                        LocalData.shared.removeReservation(reservation: reservation)
+                        self.performSegue(withIdentifier: "unwindHomeFromVisit", sender: self)
+                    }
+                } else {
+                    self.performSegue(withIdentifier: "unwindHomeFromVisit", sender: self)
+                }
             } else {
                 self.loader.isHidden = true
                 self.btnAddVisit.isEnabled = true
@@ -158,7 +205,7 @@ class AddNewVisitViewController: UIViewController {
     
     func setPromo(promo: User) {
         self.promo = promo
-        txtPromo.text = "Promoter: \(promo.name)"
+        txtPromo.text = "Promo: \(promo.name)"
         txtPromo.resignFirstResponder()
     }
     
@@ -169,8 +216,9 @@ class AddNewVisitViewController: UIViewController {
     }
     
     func setBill() {
-        txtTotal.text = "Total: \(getBillTotal().formatted())"
+        txtTotal.text = "Total: \(getBillTotal().formatted()) rsd"
         btnAddBill.setTitle("Edit Bill", for: .normal)
+        viewBottom.isHidden = false
     }
     
     func getBillTotal() -> Double {
@@ -188,7 +236,7 @@ class AddNewVisitViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destinationVC = segue.destination as? HomeViewController {
-            destinationVC.showAllHistoryInTableView()
+            destinationVC.refreshTableViewData()
         }
     }
 }

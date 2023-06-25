@@ -56,7 +56,7 @@ extension GenerateBillViewController: UITextFieldDelegate {
         for billItem in billItems {
             total += billItem.price * Double(billItem.count)
         }
-        lblTotal.text = "Total: \(total.formatted())"
+        lblTotal.text = "Total: \(total.formatted()) rsd"
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

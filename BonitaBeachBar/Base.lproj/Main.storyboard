@@ -1178,22 +1178,22 @@ Visit</string>
                                         <subviews>
                                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="TKT-YK-A1K">
                                                 <rect key="frame" x="240" y="0.0" width="120" height="44"/>
-                                                <color key="tintColor" red="0.75686274509999996" green="0.60392156860000001" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="120" id="eA3-SP-fkK"/>
                                                 </constraints>
                                                 <locale key="locale" localeIdentifier="sr-Latn_RS"/>
                                             </datePicker>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date*" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="aR6-FE-hJS">
-                                                <rect key="frame" x="0.0" y="0.0" width="311" height="44"/>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date*" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="aR6-FE-hJS">
+                                                <rect key="frame" x="8" y="0.0" width="303" height="44"/>
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                                <color key="textColor" red="0.88000010179999999" green="0.80116982430000006" blue="0.6112996369" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" red="0.75686274509999996" green="0.60392156860000001" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="aR6-FE-hJS" firstAttribute="leading" secondItem="yvz-8U-s4u" secondAttribute="leading" id="5my-ts-GFp"/>
+                                            <constraint firstItem="aR6-FE-hJS" firstAttribute="leading" secondItem="yvz-8U-s4u" secondAttribute="leading" constant="8" id="5my-ts-GFp"/>
                                             <constraint firstItem="aR6-FE-hJS" firstAttribute="top" secondItem="yvz-8U-s4u" secondAttribute="top" id="BLY-oS-J8z"/>
                                             <constraint firstAttribute="bottom" secondItem="TKT-YK-A1K" secondAttribute="bottom" id="IHb-My-3DC"/>
                                             <constraint firstItem="TKT-YK-A1K" firstAttribute="top" secondItem="yvz-8U-s4u" secondAttribute="top" id="JkN-hE-E0t"/>
@@ -1357,7 +1357,7 @@ Visit</string>
                                     <constraint firstAttribute="height" constant="260" id="nog-YM-TkK"/>
                                 </constraints>
                             </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yJE-Fc-27Z">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yJE-Fc-27Z">
                                 <rect key="frame" x="0.0" y="329" width="393" height="429"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WLd-75-kTZ">
@@ -1503,12 +1503,14 @@ Visit</string>
                         <outlet property="btnAddPromo" destination="Mgc-dO-eM4" id="Gbo-I9-Uln"/>
                         <outlet property="btnAddVisit" destination="QdH-Zk-VEu" id="T2D-XM-tSc"/>
                         <outlet property="datePicker" destination="TKT-YK-A1K" id="03s-PF-LMe"/>
+                        <outlet property="lblDate" destination="aR6-FE-hJS" id="kMl-D6-RVQ"/>
                         <outlet property="loader" destination="3xf-tR-j2s" id="8ff-Zd-FgS"/>
                         <outlet property="tableView" destination="Fr4-nF-WAa" id="VmG-db-tdq"/>
                         <outlet property="txtGuest" destination="UTD-vH-iUz" id="a7M-0F-N66"/>
                         <outlet property="txtPromo" destination="DfU-fb-GFw" id="wvx-wm-EVD"/>
                         <outlet property="txtTable" destination="EyA-Bv-Mke" id="i55-4a-bY4"/>
                         <outlet property="txtTotal" destination="0lu-MX-BjV" id="tYu-aR-RVb"/>
+                        <outlet property="viewBottom" destination="yJE-Fc-27Z" id="TR6-Dr-Vr2"/>
                         <outlet property="viewFooter" destination="1RY-62-DSc" id="iXu-tR-ZB8"/>
                         <segue destination="0zX-ai-3U6" kind="unwind" identifier="unwindHomeFromVisit" unwindAction="unwindToHomeWithSegue:" id="i4u-kP-G5B"/>
                     </connections>
@@ -1547,8 +1549,8 @@ Visit</string>
                                                 </constraints>
                                                 <locale key="locale" localeIdentifier="sr-Latn_RS"/>
                                             </datePicker>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date*" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="dkY-mP-f8Y">
-                                                <rect key="frame" x="0.0" y="0.0" width="311" height="42.666666666666664"/>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date*" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="dkY-mP-f8Y">
+                                                <rect key="frame" x="8" y="0.0" width="303" height="42.666666666666664"/>
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                                 <color key="textColor" red="0.88000010179999999" green="0.80116982430000006" blue="0.6112996369" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -1560,7 +1562,7 @@ Visit</string>
                                             <constraint firstItem="dkY-mP-f8Y" firstAttribute="top" secondItem="8LL-Ua-yNV" secondAttribute="top" id="GSM-8D-j0o"/>
                                             <constraint firstAttribute="bottom" secondItem="dkY-mP-f8Y" secondAttribute="bottom" id="OJa-J2-H33"/>
                                             <constraint firstAttribute="trailing" secondItem="dkY-mP-f8Y" secondAttribute="trailing" constant="50" id="RJy-lF-a4C"/>
-                                            <constraint firstItem="dkY-mP-f8Y" firstAttribute="leading" secondItem="8LL-Ua-yNV" secondAttribute="leading" id="aTF-zZ-gdQ"/>
+                                            <constraint firstItem="dkY-mP-f8Y" firstAttribute="leading" secondItem="8LL-Ua-yNV" secondAttribute="leading" constant="8" id="aTF-zZ-gdQ"/>
                                             <constraint firstItem="rXE-QR-Hrn" firstAttribute="top" secondItem="8LL-Ua-yNV" secondAttribute="top" id="jjD-yh-1Tg"/>
                                             <constraint firstAttribute="bottom" secondItem="rXE-QR-Hrn" secondAttribute="bottom" id="kkv-Rp-8OC"/>
                                         </constraints>
@@ -1584,7 +1586,7 @@ Visit</string>
                                                     <action selector="actionGuest:" destination="fBa-Ie-n7z" eventType="touchUpInside" id="Lbz-76-Sov"/>
                                                 </connections>
                                             </button>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Guest*" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vVX-m9-9UP">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Guest*" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vVX-m9-9UP">
                                                 <rect key="frame" x="0.0" y="0.0" width="311" height="42.333333333333336"/>
                                                 <color key="textColor" red="0.75686274509999996" green="0.60392156860000001" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
@@ -1621,7 +1623,7 @@ Visit</string>
                                                     <action selector="actionPromo:" destination="fBa-Ie-n7z" eventType="touchUpInside" id="vqQ-h6-7PP"/>
                                                 </connections>
                                             </button>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Promoter" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GKD-RN-9Qv">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Promoter" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GKD-RN-9Qv">
                                                 <rect key="frame" x="0.0" y="0.0" width="311" height="42.666666666666664"/>
                                                 <color key="textColor" red="0.75686274509999996" green="0.60392156860000001" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
@@ -1658,7 +1660,7 @@ Visit</string>
                                                     <action selector="actionPromo:" destination="fBa-Ie-n7z" eventType="touchUpInside" id="EKt-ED-sX2"/>
                                                 </connections>
                                             </button>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Table" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qkp-ZB-Cdc">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Table" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qkp-ZB-Cdc">
                                                 <rect key="frame" x="0.0" y="0.0" width="311" height="42.333333333333336"/>
                                                 <color key="textColor" red="0.75686274509803919" green="0.60392156862745094" blue="0.0039215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
@@ -1721,7 +1723,7 @@ Visit</string>
                                 </constraints>
                             </view>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c2Y-3v-cBh">
-                                <rect key="frame" x="16" y="277" width="361" height="200"/>
+                                <rect key="frame" x="16" y="277" width="361" height="120"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comment " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iM5-DS-NWM">
                                         <rect key="frame" x="14" y="8" width="230" height="21"/>
@@ -1734,7 +1736,7 @@ Visit</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Lue-h2-cGM">
-                                        <rect key="frame" x="14" y="37" width="333" height="149"/>
+                                        <rect key="frame" x="8" y="37" width="345" height="75"/>
                                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="textColor" red="0.75686274509999996" green="0.60392156860000001" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
@@ -1746,10 +1748,10 @@ Visit</string>
                                     <constraint firstItem="Lue-h2-cGM" firstAttribute="top" secondItem="iM5-DS-NWM" secondAttribute="bottom" constant="8" symbolic="YES" id="6ub-Z2-WTI"/>
                                     <constraint firstItem="iM5-DS-NWM" firstAttribute="top" secondItem="c2Y-3v-cBh" secondAttribute="top" constant="8" id="DTp-Hc-D9O"/>
                                     <constraint firstItem="iM5-DS-NWM" firstAttribute="leading" secondItem="c2Y-3v-cBh" secondAttribute="leading" constant="14" id="IpF-RC-nN2"/>
-                                    <constraint firstItem="Lue-h2-cGM" firstAttribute="leading" secondItem="c2Y-3v-cBh" secondAttribute="leading" constant="14" id="P2G-tz-AZM"/>
-                                    <constraint firstAttribute="height" constant="200" id="S1n-t7-Sxw"/>
-                                    <constraint firstAttribute="bottom" secondItem="Lue-h2-cGM" secondAttribute="bottom" constant="14" id="V1t-uU-Uhj"/>
-                                    <constraint firstAttribute="trailing" secondItem="Lue-h2-cGM" secondAttribute="trailing" constant="14" id="zks-if-XgJ"/>
+                                    <constraint firstItem="Lue-h2-cGM" firstAttribute="leading" secondItem="c2Y-3v-cBh" secondAttribute="leading" constant="8" id="P2G-tz-AZM"/>
+                                    <constraint firstAttribute="height" constant="120" id="S1n-t7-Sxw"/>
+                                    <constraint firstAttribute="bottom" secondItem="Lue-h2-cGM" secondAttribute="bottom" constant="8" id="V1t-uU-Uhj"/>
+                                    <constraint firstAttribute="trailing" secondItem="Lue-h2-cGM" secondAttribute="trailing" constant="8" id="zks-if-XgJ"/>
                                 </constraints>
                             </view>
                         </subviews>

@@ -48,15 +48,15 @@
                                                 <rect key="frame" x="116" y="0.0" width="196" height="32"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nr8-zY-sa0">
-                                                        <rect key="frame" x="0.0" y="0.0" width="196" height="32"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="146" height="32"/>
                                                         <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
                                                         <color key="textColor" red="0.75555828359999999" green="0.60310743410000001" blue="0.0056493175230000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x6l-nA-Sdc">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x6l-nA-Sdc">
                                                         <rect key="frame" x="146" y="0.0" width="50" height="32"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgCommentRight.png" translatesAutoresizingMaskIntoConstraints="NO" id="QLg-9y-rSc">
+                                                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgCommentRight.png" translatesAutoresizingMaskIntoConstraints="NO" id="QLg-9y-rSc">
                                                                 <rect key="frame" x="8" y="8" width="34" height="16"/>
                                                             </imageView>
                                                         </subviews>
@@ -146,10 +146,10 @@
             <connections>
                 <outlet property="background" destination="no9-KC-qFw" id="0E5-cf-ik3"/>
                 <outlet property="guestName" destination="UIV-C5-Uu8" id="EDl-by-D0Z"/>
+                <outlet property="imgComment" destination="QLg-9y-rSc" id="BEo-Fu-Rr0"/>
                 <outlet property="lblPromoName" destination="0XG-V3-Mse" id="r2J-6V-Xel"/>
                 <outlet property="lblTableNumber" destination="Nr8-zY-sa0" id="PAa-km-w2r"/>
                 <outlet property="viewBookedBy" destination="kg7-tH-mkc" id="ZjU-iy-7zE"/>
-                <outlet property="viewComment" destination="x6l-nA-Sdc" id="vzc-wv-gb3"/>
             </connections>
             <point key="canvasLocation" x="112.97709923664122" y="52.816901408450704"/>
         </tableViewCell>

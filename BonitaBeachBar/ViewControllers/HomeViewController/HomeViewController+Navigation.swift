@@ -28,6 +28,20 @@ extension HomeViewController {
         }
     }
     
+    func showReservation(indexPath: IndexPath) {
+        searchBar.resignFirstResponder()
+        if let reservation = bonitaDataSource[indexPath.row] as? Reservation {
+            if reservation.inThePast(),
+               let vc = storyBoard.instantiateViewController(withIdentifier: "AddNewVisitViewController") as? AddNewVisitViewController {
+                vc.reservation = reservation
+                self.navigationController?.pushViewController(vc, animated: true)
+            } else if let vc = storyBoard.instantiateViewController(withIdentifier: "ReservationViewController") as? ReservationViewController {
+                vc.reservation = reservation
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
+        }
+    }
+    
     func showUser(indexPath: IndexPath) {
         if let user = bonitaDataSource[indexPath.row] as? User,
             let vc = storyBoard.instantiateViewController(withIdentifier: "AddNewUserViewController") as? AddNewUserViewController {

@@ -34,7 +34,7 @@ extension AddNewVisitViewController: UITableViewDataSource, UITableViewDelegate 
             }
             else if tableViewSuggestionsType == .table,
                     let table = tableViewSuggestionsDataSourceFiltered[indexPath.row] as? Table {
-                cell.textLabel?.text = "\(table.number) | (\(table.type.rawValue))"
+                cell.textLabel?.text = "\(table.number))"
             }
             cell.textLabel?.textAlignment = .center
             return cell

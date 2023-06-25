@@ -93,15 +93,19 @@ extension FirebaseService {
         let collectionName: String = "posete"
         guard
             let guestID = visit.guest?.id,
-            let promoID = visit.promo?.id,
             let billID = visit.bill?.id
         else { return }
-        let data: [String: Any] = [
+        var data: [String: Any] = [
             "billID": billID,
             "date": visit.date,
-            "guestID": guestID,
-            "promoID": promoID
+            "guestID": guestID
         ]
+        if let promoID = visit.promo?.id {
+            data["promoID"] = promoID
+        }
+        if let table = visit.table?.number {
+            data["table"] = table
+        }
         firestore
             .collection(collectionName)
             .document(visit.id)

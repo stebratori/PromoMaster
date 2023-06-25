@@ -55,4 +55,17 @@ extension FirebaseService {
             }
         }
     }
+    
+    func deleteReservation(reservation: Reservation, completion: @escaping(_ success: Bool) -> Void) {
+        firestore
+            .collection("reservations")
+            .document(reservation.id)
+            .delete() { err in
+            if let err = err {
+                completion(false)
+            } else {
+                completion(true)
+            }
+        }
+    }
 }

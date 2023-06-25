@@ -12,9 +12,9 @@ class ReservationsTableViewCell: UITableViewCell {
     @IBOutlet weak var background: UIView!
     @IBOutlet weak var guestName: UILabel!
     @IBOutlet weak var lblTableNumber: UILabel!
-    @IBOutlet weak var viewComment: UIView!
     @IBOutlet weak var lblPromoName: UILabel!
     @IBOutlet weak var viewBookedBy: UIView!
+    @IBOutlet weak var imgComment: UIImageView!
     var reservation: Reservation?
     
     func setupView(reservation: Reservation) {
@@ -29,10 +29,8 @@ class ReservationsTableViewCell: UITableViewCell {
         } else {
             viewBookedBy.isHidden = true
         }
-        if reservation.comment != nil {
-            viewComment.isHidden = false
-        } else {
-            viewComment.isHidden = true
+        if let comment = reservation.comment, comment.count > 0 {
+            imgComment.isHidden = false
         }
     }
 }

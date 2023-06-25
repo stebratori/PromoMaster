@@ -455,273 +455,49 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "C93017EE-AF59-45A6-9CAF-14C3404144A6"
+            uuid = "905DD51D-EF9C-49F3-8FFC-1060DB5A206E"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BonitaBeachBar/ViewControllers/AddNewVisitViewController/AddNewVisitViewController+TextView.swift"
+            filePath = "BonitaBeachBar/ViewControllers/HomeViewController/HomeViewController+Search.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
-            landmarkName = "showTableViewSuggestions(below:)"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "showSearchResults(searchText:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "C93017EE-AF59-45A6-9CAF-14C3404144A6 - 90dbefb63c024801"
+                  uuid = "905DD51D-EF9C-49F3-8FFC-1060DB5A206E - 7daf419096686815"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "BonitaBeachBar.AddNewVisitViewController.showTableViewSuggestions(below: __C.UITextField) -&gt; ()"
+                  symbolName = "BonitaBeachBar.HomeViewController.showSearchResults(searchText: Swift.String) -&gt; ()"
                   moduleName = "BonitaBeachBar"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/stebra/Dev/BonitaBeachBar/BonitaBeachBar/ViewControllers/AddNewVisitViewController/AddNewVisitViewController+TextView.swift"
+                  urlString = "file:///Users/stebra/Dev/BonitaBeachBar/BonitaBeachBar/ViewControllers/HomeViewController/HomeViewController+Search.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "61"
-                  endingLineNumber = "61"
-                  offsetFromSymbolStart = "144">
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "4828">
                </Location>
                <Location
-                  uuid = "C93017EE-AF59-45A6-9CAF-14C3404144A6 - 90dbefb63c024801"
+                  uuid = "905DD51D-EF9C-49F3-8FFC-1060DB5A206E - 7daf419096686815"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "BonitaBeachBar.AddNewVisitViewController.showTableViewSuggestions(below: __C.UITextField) -&gt; ()"
+                  symbolName = "BonitaBeachBar.HomeViewController.showSearchResults(searchText: Swift.String) -&gt; ()"
                   moduleName = "BonitaBeachBar"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/stebra/Dev/BonitaBeachBar/BonitaBeachBar/ViewControllers/AddNewVisitViewController/AddNewVisitViewController+TextView.swift"
+                  urlString = "file:///Users/stebra/Dev/BonitaBeachBar/BonitaBeachBar/ViewControllers/HomeViewController/HomeViewController+Search.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "61"
-                  endingLineNumber = "61"
-                  offsetFromSymbolStart = "444">
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "4820">
                </Location>
             </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "4D50ABD0-29F3-443A-B995-472145EBA4F5"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BonitaBeachBar/ViewControllers/AddNewVisitViewController/AddNewVisitViewController+TextView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
-            landmarkName = "showTableViewSuggestions(below:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "4D50ABD0-29F3-443A-B995-472145EBA4F5 - 90dbefb63c024860"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "BonitaBeachBar.AddNewVisitViewController.showTableViewSuggestions(below: __C.UITextField) -&gt; ()"
-                  moduleName = "BonitaBeachBar"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/stebra/Dev/BonitaBeachBar/BonitaBeachBar/ViewControllers/AddNewVisitViewController/AddNewVisitViewController+TextView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "62"
-                  endingLineNumber = "62"
-                  offsetFromSymbolStart = "476">
-               </Location>
-               <Location
-                  uuid = "4D50ABD0-29F3-443A-B995-472145EBA4F5 - 90dbefb63c024860"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "BonitaBeachBar.AddNewVisitViewController.showTableViewSuggestions(below: __C.UITextField) -&gt; ()"
-                  moduleName = "BonitaBeachBar"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/stebra/Dev/BonitaBeachBar/BonitaBeachBar/ViewControllers/AddNewVisitViewController/AddNewVisitViewController+TextView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "62"
-                  endingLineNumber = "62"
-                  offsetFromSymbolStart = "548">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "24D4893C-A343-4342-BE40-D3B22377D056"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BonitaBeachBar/ViewControllers/AddNewVisitViewController/AddNewVisitViewController+TextView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
-            landmarkName = "showTableViewSuggestions(below:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "24D4893C-A343-4342-BE40-D3B22377D056 - 90dbefb63c024843"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "BonitaBeachBar.AddNewVisitViewController.showTableViewSuggestions(below: __C.UITextField) -&gt; ()"
-                  moduleName = "BonitaBeachBar"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/stebra/Dev/BonitaBeachBar/BonitaBeachBar/ViewControllers/AddNewVisitViewController/AddNewVisitViewController+TextView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "63"
-                  endingLineNumber = "63"
-                  offsetFromSymbolStart = "576">
-               </Location>
-               <Location
-                  uuid = "24D4893C-A343-4342-BE40-D3B22377D056 - 90dbefb63c024843"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "BonitaBeachBar.AddNewVisitViewController.showTableViewSuggestions(below: __C.UITextField) -&gt; ()"
-                  moduleName = "BonitaBeachBar"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/stebra/Dev/BonitaBeachBar/BonitaBeachBar/ViewControllers/AddNewVisitViewController/AddNewVisitViewController+TextView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "63"
-                  endingLineNumber = "63"
-                  offsetFromSymbolStart = "644">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "50969B53-3842-4D98-A194-38ECC799B9CD"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BonitaBeachBar/ViewControllers/AddNewVisitViewController/AddNewVisitViewController+TextView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
-            landmarkName = "showTableViewSuggestions(below:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "50969B53-3842-4D98-A194-38ECC799B9CD - 90dbefb63c024ba2"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "BonitaBeachBar.AddNewVisitViewController.showTableViewSuggestions(below: __C.UITextField) -&gt; ()"
-                  moduleName = "BonitaBeachBar"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/stebra/Dev/BonitaBeachBar/BonitaBeachBar/ViewControllers/AddNewVisitViewController/AddNewVisitViewController+TextView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "64"
-                  endingLineNumber = "64"
-                  offsetFromSymbolStart = "680">
-               </Location>
-               <Location
-                  uuid = "50969B53-3842-4D98-A194-38ECC799B9CD - 90dbefb63c024ba2"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "BonitaBeachBar.AddNewVisitViewController.showTableViewSuggestions(below: __C.UITextField) -&gt; ()"
-                  moduleName = "BonitaBeachBar"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/stebra/Dev/BonitaBeachBar/BonitaBeachBar/ViewControllers/AddNewVisitViewController/AddNewVisitViewController+TextView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "64"
-                  endingLineNumber = "64"
-                  offsetFromSymbolStart = "748">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "D619FB34-2E6F-44D5-893F-A97FFEAF972A"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BonitaBeachBar/ViewControllers/AddNewVisitViewController/AddNewVisitViewController+TextView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
-            landmarkName = "showTableViewSuggestions(below:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "D7022D9E-3BF9-4726-91AD-C39F243ED4F3"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BonitaBeachBar/ViewControllers/AddNewVisitViewController/AddNewVisitViewController+TextView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
-            landmarkName = "showTableViewSuggestions(below:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "4E9ED179-6B1D-48B4-9919-292BE70C293B"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BonitaBeachBar/ViewControllers/AddNewVisitViewController/AddNewVisitViewController+TextView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "95"
-            endingLineNumber = "95"
-            landmarkName = "showTableViewSuggestions(below:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "265F3314-E3B1-46F5-839D-F26DCD5F0988"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BonitaBeachBar/ViewControllers/AddNewVisitViewController/AddNewVisitViewController+TextView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
-            landmarkName = "showTableViewSuggestions(below:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "EF200C59-F0EB-4F3F-BD91-90E436D824F0"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BonitaBeachBar/ViewControllers/AddNewVisitViewController/AddNewVisitViewController+TextView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
-            landmarkName = "showTableViewSuggestions(below:)"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

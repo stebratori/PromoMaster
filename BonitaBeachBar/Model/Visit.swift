@@ -11,17 +11,18 @@ struct Visit {
     var id: String
     var date: String
     var comment: String?
-    var table: String?
+    var table: Table?
     var guest: User?
     var promo: User?
     var bill: Bill?
     
-    init(id: String, date: String, guest: User, promo: User?, bill: Bill) {
+    init(id: String, date: String, guest: User, promo: User?, bill: Bill, table: Table?) {
         self.id = id
         self.date = date
         self.guest = guest
         self.promo = promo
         self.bill = bill
+        self.table = table
     }
     
     init?(id: String, data: [String: Any]) {
@@ -39,7 +40,7 @@ struct Visit {
             self.bill = LocalData.shared.getBill(byId: billID)
         }
         if let table = data["table"] as? String {
-            self.table = table
+            self.table = Table(number: table)
         }
         if let comment = data["comment"] as? String {
             self.comment = comment

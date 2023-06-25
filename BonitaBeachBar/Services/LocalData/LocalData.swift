@@ -101,4 +101,59 @@ class LocalData {
         }
         return nil
     }
+    
+    func getAvailableTables(forDate date: String?) -> [Table]? {
+        guard let tables = tables, let date = date else { return nil }
+        var availableTables: [Table] = []
+        for table in tables {
+            var booked: Bool = false
+            if let reservations = reservations {
+                for reservation in reservations {
+                    if let reservationTable = reservation.table,
+                       reservation.date == date,
+                       reservationTable == table.number {
+                        booked = true
+                    }
+                }
+            }
+            if !booked {
+                availableTables.append(table)
+            }
+        }
+        return availableTables
+    }
+    
+    func getReservation(forTable table: String, date: String) -> Reservation? {
+        guard let reservations = reservations else { return nil }
+        for reservation in reservations {
+            if let reservationTable = reservation.table,
+               reservationTable == table,
+               reservation.date == date {
+                return reservation
+            }
+        }
+        return nil
+    }
+    
+    func getVisit(forTable table: String, date: String) -> Visit? {
+        guard let visits = allVisits else { return nil }
+        for visit in visits {
+            if let visitTable = visit.table?.number,
+               visitTable == table,
+               visit.date == date {
+                return visit
+            }
+        }
+        return nil
+    }
+    
+    func removeReservation(reservation: Reservation) {
+        guard var reservations = reservations else { return }
+        for (index, oldReservation) in reservations.enumerated() {
+            if oldReservation.id == reservation.id {
+                reservations.remove(at: index)
+            }
+        }
+        LocalData.shared.reservations = reservations
+    }
 }

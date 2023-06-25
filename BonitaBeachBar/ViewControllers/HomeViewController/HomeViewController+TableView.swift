@@ -31,7 +31,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch dataType {
         case .guests,  .promo, .master: showUser(indexPath: indexPath)
-        case .history, .reservations: showVisit(indexPath: indexPath)
+        case .history: showVisit(indexPath: indexPath)
+        case .reservations: showReservation(indexPath: indexPath)
         }
     }
     
@@ -114,8 +115,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
                 visits.append(visit)
             }
         }
-        bonitaDataSource = visits
-        preFilteredDataSource = visits
+        bonitaDataSource = visits.sorted(by: { $0.bill?.total ?? 0 > $1.bill?.total ?? 0 })
+        preFilteredDataSource = visits.sorted(by: { $0.bill?.total ?? 0 > $1.bill?.total ?? 0 })
         tableView.reloadData()
     }
     
@@ -144,6 +145,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         if let searchText = searchBar.text, searchText.count > 0 {
             showSearchResults(searchText: searchText)
         }
+        setPreviousBookingsNotificationIfNeeded()
     }
 }
 

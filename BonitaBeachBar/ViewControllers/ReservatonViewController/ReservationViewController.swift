@@ -21,7 +21,8 @@ class ReservationViewController: UIViewController {
     @IBOutlet weak var loader: UIActivityIndicatorView!
     @IBOutlet weak var btnBookTable: UIButton!
     @IBOutlet weak var viewTap: UIView!
-    private var reservation: Reservation?
+    var reservation: Reservation?
+    var editReservation: Bool = false
     private let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
     var guest: User?
     var promo: User?
@@ -51,7 +52,6 @@ class ReservationViewController: UIViewController {
         txtComment.cornerRadius()
         btnGuest.cornerRadius()
         btnPromo.cornerRadius()
-        viewComment.cornerRadius()
         txtComment.cornerRadius()
         btnBookTable.cornerRadius()
         txtTableNumber.cornerRadius()
@@ -78,6 +78,25 @@ class ReservationViewController: UIViewController {
     }
     
     private func editReservation(reservation: Reservation) {
+        if let date = reservation.date.toDate() {
+            datePicker.date = date
+        }
+        if let promo = reservation.promo {
+            txtPromo.text = promo.name
+            txtPromo.isEnabled = false
+            self.promo = reservation.promo
+        }
+        if let table = reservation.table {
+            txtTableNumber.text = table
+            self.table = Table(number: table)
+        }
+        if let comment = reservation.comment {
+            txtComment.text = comment
+        }
+        btnBookTable.setTitle("Edit Booking", for: .normal)
+        txtGuest.text = reservation.guest.name
+        editReservation = true
+        guest = reservation.guest
     }
 
     @IBAction func actionGuest(_ sender: UIButton) {
@@ -96,20 +115,20 @@ class ReservationViewController: UIViewController {
     
     func setGuest(guest: User) {
         self.guest = guest
-        txtGuest.text = guest.name
+        txtGuest.text = "Guest: \(guest.name)"
         txtGuest.layer.borderWidth = 0
         txtGuest.resignFirstResponder()
     }
     
     func setPromo(promo: User) {
         self.promo = promo
-        txtPromo.text = promo.name
+        txtPromo.text = "Promo: \(promo.name)"
         txtPromo.resignFirstResponder()
     }
     
     func setTable(table: Table) {
         self.table = table
-        txtTableNumber.text = table.number
+        txtTableNumber.text = "Table: \(table.number)"
         txtTableNumber.resignFirstResponder()
     }
     
@@ -122,8 +141,14 @@ class ReservationViewController: UIViewController {
         }
         btnBookTable.isEnabled = false
         loader.isHidden = false
-        let reservation = Reservation(id: UUID().uuidString.lowercased(),
-                                      date: datePicker.stringDate(),
+        var reservationID = UUID().uuidString.lowercased()
+        var date = datePicker.stringDate()
+        if let reservation = reservation {
+            reservationID = reservation.id
+            date = reservation.date
+        }
+        let reservation = Reservation(id: reservationID,
+                                      date: date,
                                       guest: guest,
                                       promo: promo,
                                       table: txtTableNumber.text,

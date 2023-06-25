@@ -16,4 +16,10 @@ extension String {
         let stringFormatted4: String = stringFormatted3.replacingOccurrences(of: "ž", with: "z")
         return stringFormatted4
     }
+    
+    func toDate() -> Date? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy.MM.dd"
+        return dateFormatter.date(from:self)
+    }
 }

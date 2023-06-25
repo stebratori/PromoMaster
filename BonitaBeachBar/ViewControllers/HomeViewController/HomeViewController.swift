@@ -36,13 +36,13 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.hidesBackButton = true
         searchBar.delegate = self
         subscribeToMyNotifications()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        navigationItem.hidesBackButton = true
         setupView()
         refreshTableViewData()
         setPreviousBookingsNotificationIfNeeded()

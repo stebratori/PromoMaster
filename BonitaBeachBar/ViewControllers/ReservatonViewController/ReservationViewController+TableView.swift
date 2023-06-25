@@ -22,7 +22,7 @@ extension ReservationViewController: UITableViewDelegate, UITableViewDataSource 
         }
         else if tableViewSuggestionsType == .table,
                 let table = tableViewSuggestionsDataSourceFiltered[indexPath.row] as? Table {
-            cell.textLabel?.text = "\(table.number) | (\(table.type.rawValue))"
+            cell.textLabel?.text = "\(table.number)"
         }
         cell.textLabel?.textAlignment = .center
         return cell
@@ -51,51 +51,7 @@ extension ReservationViewController: UITableViewDelegate, UITableViewDataSource 
         return 44
     }
     
-    func showTableViewSuggestions(below textField: UITextField) {
-        guard
-            let textViewOrigin = textField.superview?.convert(textField.frame.origin, to: nil),
-            let allGuests = LocalData.shared.allGuests,
-            let allPromo = LocalData.shared.allPromo,
-            let allTables = LocalData.shared.tables
-        else { return }
-        
-
-        let tableViewFrame = CGRect(x: textViewOrigin.x,
-                                    y: textViewOrigin.y + textField.frame.size.height,
-                                    width: textField.frame.size.width,
-                                    height: 130)
-        let tableView = UITableView(frame: tableViewFrame)
-        tableView.delegate = self
-        tableView.dataSource = self
-        if textField == txtGuest {
-            tableViewSuggestionsType = .guest
-            tableViewSuggestionsDataSource = allGuests
-            tableViewSuggestionsDataSourceFiltered = allGuests
-        }
-        else if textField == txtPromo {
-            tableViewSuggestionsType = .promo
-            tableViewSuggestionsDataSource = allPromo
-            tableViewSuggestionsDataSourceFiltered = allPromo
-        }
-        else if textField == txtTableNumber {
-            tableViewSuggestionsType = .table
-            tableViewSuggestionsDataSource = allTables
-            tableViewSuggestionsDataSourceFiltered = allTables
-        }
-        tableView.layer.borderColor = Constants.yellowDark.cgColor
-        tableView.layer.borderWidth = 1
-        tableViewSuggestions = tableView
-        view.addSubview(tableView)
-        view.bringSubviewToFront(tableView)
-        tableViewSuggestions?.reloadData()
-    }
     
-    func removeSuggestionsTableView() {
-        tableViewSuggestions?.removeFromSuperview()
-        tableViewSuggestions = nil
-        tableViewSuggestionsDataSource = []
-        tableViewSuggestionsDataSourceFiltered = []
-    }
 }
 
 enum TableViewSuggestionsType {
