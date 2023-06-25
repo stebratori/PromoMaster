@@ -7,23 +7,161 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CCEAE3D1EF98F7740C133428 /* Pods_BonitaBeachBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80C524D6DFA5D995E5E7D6A4 /* Pods_BonitaBeachBar.framework */; };
+		F11148A92A31C481004CA5C1 /* UsersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11148A72A31C481004CA5C1 /* UsersTableViewCell.swift */; };
+		F11148AA2A31C481004CA5C1 /* UsersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F11148A82A31C481004CA5C1 /* UsersTableViewCell.xib */; };
+		F11148AC2A31C8F6004CA5C1 /* arrowHead.png in Resources */ = {isa = PBXBuildFile; fileRef = F11148AB2A31C8F6004CA5C1 /* arrowHead.png */; };
+		F11148B02A31D8CB004CA5C1 /* VisitsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11148AE2A31D8CB004CA5C1 /* VisitsTableViewCell.swift */; };
+		F11148B12A31D8CB004CA5C1 /* VisitsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F11148AF2A31D8CB004CA5C1 /* VisitsTableViewCell.xib */; };
+		F11148B42A32178F004CA5C1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11148B32A32178F004CA5C1 /* Constants.swift */; };
+		F11148BC2A333054004CA5C1 /* AddNewUser+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11148BB2A333054004CA5C1 /* AddNewUser+TableView.swift */; };
+		F11148BE2A33385F004CA5C1 /* bonita_logo_heart.png in Resources */ = {isa = PBXBuildFile; fileRef = F11148BD2A33385F004CA5C1 /* bonita_logo_heart.png */; };
+		F11148C02A3366E7004CA5C1 /* background_jungle_dark.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F11148BF2A3366E7004CA5C1 /* background_jungle_dark.jpg */; };
+		F11148C22A33683A004CA5C1 /* splash_screen_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F11148C12A33683A004CA5C1 /* splash_screen_image.jpg */; };
+		F11148C82A347D19004CA5C1 /* BonitaPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11148C72A347D19004CA5C1 /* BonitaPopupView.swift */; };
+		F11148CA2A347D26004CA5C1 /* BonitaPopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F11148C92A347D26004CA5C1 /* BonitaPopupView.xib */; };
+		F11148CC2A3481AE004CA5C1 /* AddNewUser+Popup.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11148CB2A3481AE004CA5C1 /* AddNewUser+Popup.swift */; };
+		F11AFBC62A30B55C005B3858 /* bonita_logo.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F11AFBC42A30B55C005B3858 /* bonita_logo.jpeg */; };
+		F11AFBCB2A30BF61005B3858 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11AFBCA2A30BF61005B3858 /* LoginViewController.swift */; };
+		F11AFBCD2A30BFE6005B3858 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11AFBCC2A30BFE6005B3858 /* UIView+Extensions.swift */; };
+		F11AFBD12A310561005B3858 /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11AFBD02A310561005B3858 /* PersistenceService.swift */; };
+		F11AFBD42A312066005B3858 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11AFBD32A312066005B3858 /* UserService.swift */; };
+		F127AD6E2A3DC21F0011102D /* Reservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F127AD6D2A3DC21F0011102D /* Reservation.swift */; };
+		F13956FF2A42BA8100503605 /* ReservationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13956FE2A42BA8100503605 /* ReservationViewController.swift */; };
+		F13957012A42C19F00503605 /* UIDatePicker+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13957002A42C19F00503605 /* UIDatePicker+Extensions.swift */; };
+		F13957032A42E57800503605 /* ReservationViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13957022A42E57800503605 /* ReservationViewController+TableView.swift */; };
+		F13957062A42EADC00503605 /* ReservationViewController+TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13957052A42EADC00503605 /* ReservationViewController+TextView.swift */; };
 		F193F40F2A226BBE0044DABE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193F40E2A226BBE0044DABE /* AppDelegate.swift */; };
 		F193F4112A226BBE0044DABE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193F4102A226BBE0044DABE /* SceneDelegate.swift */; };
-		F193F4132A226BBE0044DABE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193F4122A226BBE0044DABE /* ViewController.swift */; };
 		F193F4162A226BBE0044DABE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F193F4142A226BBE0044DABE /* Main.storyboard */; };
 		F193F4182A226BBF0044DABE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F193F4172A226BBF0044DABE /* Assets.xcassets */; };
 		F193F41B2A226BBF0044DABE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F193F4192A226BBF0044DABE /* LaunchScreen.storyboard */; };
+		F193F4242A2273270044DABE /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193F4232A2273270044DABE /* FirebaseService.swift */; };
+		F193F42C2A227C5B0044DABE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193F42B2A227C5B0044DABE /* User.swift */; };
+		F193F42E2A227CAC0044DABE /* Visit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193F42D2A227CAC0044DABE /* Visit.swift */; };
+		F193F4302A227D670044DABE /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193F42F2A227D670044DABE /* Bill.swift */; };
+		F193F4342A23B4110044DABE /* Firebase+Guests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193F4332A23B4110044DABE /* Firebase+Guests.swift */; };
+		F193F4362A23B4A10044DABE /* LocalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193F4352A23B4A10044DABE /* LocalData.swift */; };
+		F193F4382A23B6290044DABE /* MyNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193F4372A23B6290044DABE /* MyNotification.swift */; };
+		F193F43A2A23B9290044DABE /* Firebase+Promo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193F4392A23B9290044DABE /* Firebase+Promo.swift */; };
+		F193F43C2A23B9720044DABE /* Firebase+Master.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193F43B2A23B9720044DABE /* Firebase+Master.swift */; };
+		F193F43E2A23BB920044DABE /* Firebase+Bills.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193F43D2A23BB920044DABE /* Firebase+Bills.swift */; };
+		F193F4402A23BE9D0044DABE /* Firebase+AllUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193F43F2A23BE9D0044DABE /* Firebase+AllUsers.swift */; };
+		F193F4422A23BF660044DABE /* Firebase+Visits.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193F4412A23BF660044DABE /* Firebase+Visits.swift */; };
+		F193F4462A23C6F80044DABE /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193F4452A23C6F80044DABE /* SplashViewController.swift */; };
+		F193F4482A23C83D0044DABE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193F4472A23C83D0044DABE /* HomeViewController.swift */; };
+		F19B0DC62A2F7A1C003FFDCD /* GenerateBillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19B0DC52A2F7A1C003FFDCD /* GenerateBillViewController.swift */; };
+		F19B0DC82A2F8132003FFDCD /* GenerateBillViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19B0DC72A2F8132003FFDCD /* GenerateBillViewController+TableView.swift */; };
+		F19B0DCC2A2F819A003FFDCD /* BillTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19B0DCA2A2F819A003FFDCD /* BillTableViewCell.swift */; };
+		F19B0DCD2A2F819A003FFDCD /* BillTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F19B0DCB2A2F819A003FFDCD /* BillTableViewCell.xib */; };
+		F19B0DCF2A2F880A003FFDCD /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19B0DCE2A2F880A003FFDCD /* Double+Extensions.swift */; };
+		F19B0DD12A2F9880003FFDCD /* GenerateBillViewController+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19B0DD02A2F9880003FFDCD /* GenerateBillViewController+TextField.swift */; };
+		F19B0DD32A2F9F18003FFDCD /* AddNewVisitViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19B0DD22A2F9F18003FFDCD /* AddNewVisitViewController+TableView.swift */; };
+		F1AC3A072A3D059400944E33 /* Firebase+Reservations.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AC3A062A3D059400944E33 /* Firebase+Reservations.swift */; };
+		F1AC3A092A3D0A8D00944E33 /* imgBonitaLetters.png in Resources */ = {isa = PBXBuildFile; fileRef = F1AC3A082A3D0A8D00944E33 /* imgBonitaLetters.png */; };
+		F1AC3A0D2A3D0CBB00944E33 /* imgLogoBonita.png in Resources */ = {isa = PBXBuildFile; fileRef = F1AC3A0C2A3D0CBB00944E33 /* imgLogoBonita.png */; };
+		F1AC3A112A3D112B00944E33 /* ReservationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AC3A0F2A3D112B00944E33 /* ReservationsTableViewCell.swift */; };
+		F1AC3A122A3D112B00944E33 /* ReservationsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1AC3A102A3D112B00944E33 /* ReservationsTableViewCell.xib */; };
+		F1AC3A152A3D225300944E33 /* imgCommentRightFull.png in Resources */ = {isa = PBXBuildFile; fileRef = F1AC3A132A3D225200944E33 /* imgCommentRightFull.png */; };
+		F1AC3A182A3D22B300944E33 /* imgCommentRight.png in Resources */ = {isa = PBXBuildFile; fileRef = F1AC3A172A3D22B300944E33 /* imgCommentRight.png */; };
+		F1D4FC302A24D0D5000D8981 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F1D4FC2F2A24D0D5000D8981 /* GoogleService-Info.plist */; };
+		F1D4FC322A251117000D8981 /* AddNewUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D4FC312A251117000D8981 /* AddNewUserViewController.swift */; };
+		F1D4FC352A2600B3000D8981 /* HomeViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D4FC342A2600B3000D8981 /* HomeViewController+TableView.swift */; };
+		F1D4FC372A260809000D8981 /* HomeViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D4FC362A260809000D8981 /* HomeViewController+UI.swift */; };
+		F1D4FC392A2608E3000D8981 /* HomeViewController+Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D4FC382A2608E3000D8981 /* HomeViewController+Search.swift */; };
+		F1D4FC3C2A26098A000D8981 /* UIString+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D4FC3B2A26098A000D8981 /* UIString+Extensions.swift */; };
+		F1D4FC3E2A260E15000D8981 /* HomeViewController+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D4FC3D2A260E15000D8981 /* HomeViewController+Navigation.swift */; };
+		F1D4FC402A2613FB000D8981 /* HomeViewController+MyNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D4FC3F2A2613FB000D8981 /* HomeViewController+MyNotifications.swift */; };
+		F1D4FC452A266513000D8981 /* AddNewVisitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D4FC442A266513000D8981 /* AddNewVisitViewController.swift */; };
+		F1D4FC4A2A266794000D8981 /* AddUserToVisitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D4FC492A266794000D8981 /* AddUserToVisitViewController.swift */; };
+		F1D4FC4C2A2668ED000D8981 /* AddUserToVisitViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D4FC4B2A2668ED000D8981 /* AddUserToVisitViewController+TableView.swift */; };
+		F1F1FEE12A3C9B3F006CF26B /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F1FEE02A3C9B3F006CF26B /* MenuItem.swift */; };
+		F1F1FEE32A3C9BF2006CF26B /* Firebase+Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F1FEE22A3C9BF2006CF26B /* Firebase+Menu.swift */; };
+		F1F1FEE62A3CA92A006CF26B /* Firebase+Realtime.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F1FEE52A3CA92A006CF26B /* Firebase+Realtime.swift */; };
+		F1F6DFCC2A44AC6100FC8794 /* Firebase+Tables.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F6DFCB2A44AC6100FC8794 /* Firebase+Tables.swift */; };
+		F1F6DFCE2A44AC7D00FC8794 /* Table.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F6DFCD2A44AC7D00FC8794 /* Table.swift */; };
+		F1F7F6D72A48973F00291273 /* AddNewVisitViewController+TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F7F6D62A48973F00291273 /* AddNewVisitViewController+TextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		52DC7557AC6F3B8238AAED2D /* Pods-BonitaBeachBar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BonitaBeachBar.release.xcconfig"; path = "Target Support Files/Pods-BonitaBeachBar/Pods-BonitaBeachBar.release.xcconfig"; sourceTree = "<group>"; };
+		80C524D6DFA5D995E5E7D6A4 /* Pods_BonitaBeachBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BonitaBeachBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C95D1C12B55C55188D8EBBC3 /* Pods-BonitaBeachBar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BonitaBeachBar.debug.xcconfig"; path = "Target Support Files/Pods-BonitaBeachBar/Pods-BonitaBeachBar.debug.xcconfig"; sourceTree = "<group>"; };
+		F11148A72A31C481004CA5C1 /* UsersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableViewCell.swift; sourceTree = "<group>"; };
+		F11148A82A31C481004CA5C1 /* UsersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsersTableViewCell.xib; sourceTree = "<group>"; };
+		F11148AB2A31C8F6004CA5C1 /* arrowHead.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrowHead.png; sourceTree = "<group>"; };
+		F11148AE2A31D8CB004CA5C1 /* VisitsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitsTableViewCell.swift; sourceTree = "<group>"; };
+		F11148AF2A31D8CB004CA5C1 /* VisitsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VisitsTableViewCell.xib; sourceTree = "<group>"; };
+		F11148B32A32178F004CA5C1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F11148BB2A333054004CA5C1 /* AddNewUser+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddNewUser+TableView.swift"; sourceTree = "<group>"; };
+		F11148BD2A33385F004CA5C1 /* bonita_logo_heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bonita_logo_heart.png; sourceTree = "<group>"; };
+		F11148BF2A3366E7004CA5C1 /* background_jungle_dark.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background_jungle_dark.jpg; sourceTree = "<group>"; };
+		F11148C12A33683A004CA5C1 /* splash_screen_image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = splash_screen_image.jpg; sourceTree = "<group>"; };
+		F11148C72A347D19004CA5C1 /* BonitaPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonitaPopupView.swift; sourceTree = "<group>"; };
+		F11148C92A347D26004CA5C1 /* BonitaPopupView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BonitaPopupView.xib; sourceTree = "<group>"; };
+		F11148CB2A3481AE004CA5C1 /* AddNewUser+Popup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddNewUser+Popup.swift"; sourceTree = "<group>"; };
+		F11AFBC42A30B55C005B3858 /* bonita_logo.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bonita_logo.jpeg; sourceTree = "<group>"; };
+		F11AFBCA2A30BF61005B3858 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F11AFBCC2A30BFE6005B3858 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		F11AFBD02A310561005B3858 /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
+		F11AFBD32A312066005B3858 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		F127AD6D2A3DC21F0011102D /* Reservation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reservation.swift; sourceTree = "<group>"; };
+		F13956FE2A42BA8100503605 /* ReservationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationViewController.swift; sourceTree = "<group>"; };
+		F13957002A42C19F00503605 /* UIDatePicker+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDatePicker+Extensions.swift"; sourceTree = "<group>"; };
+		F13957022A42E57800503605 /* ReservationViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReservationViewController+TableView.swift"; sourceTree = "<group>"; };
+		F13957052A42EADC00503605 /* ReservationViewController+TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ReservationViewController+TextView.swift"; path = "../../../../../../../Applications/ReservationViewController+TextView.swift"; sourceTree = "<group>"; };
 		F193F40B2A226BBE0044DABE /* BonitaBeachBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BonitaBeachBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F193F40E2A226BBE0044DABE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F193F4102A226BBE0044DABE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F193F4122A226BBE0044DABE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F193F4152A226BBE0044DABE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F193F4172A226BBF0044DABE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F193F41A2A226BBF0044DABE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F193F41C2A226BC00044DABE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F193F4232A2273270044DABE /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
+		F193F42B2A227C5B0044DABE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F193F42D2A227CAC0044DABE /* Visit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Visit.swift; sourceTree = "<group>"; };
+		F193F42F2A227D670044DABE /* Bill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bill.swift; sourceTree = "<group>"; };
+		F193F4332A23B4110044DABE /* Firebase+Guests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firebase+Guests.swift"; sourceTree = "<group>"; };
+		F193F4352A23B4A10044DABE /* LocalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalData.swift; sourceTree = "<group>"; };
+		F193F4372A23B6290044DABE /* MyNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNotification.swift; sourceTree = "<group>"; };
+		F193F4392A23B9290044DABE /* Firebase+Promo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firebase+Promo.swift"; sourceTree = "<group>"; };
+		F193F43B2A23B9720044DABE /* Firebase+Master.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firebase+Master.swift"; sourceTree = "<group>"; };
+		F193F43D2A23BB920044DABE /* Firebase+Bills.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firebase+Bills.swift"; sourceTree = "<group>"; };
+		F193F43F2A23BE9D0044DABE /* Firebase+AllUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firebase+AllUsers.swift"; sourceTree = "<group>"; };
+		F193F4412A23BF660044DABE /* Firebase+Visits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firebase+Visits.swift"; sourceTree = "<group>"; };
+		F193F4452A23C6F80044DABE /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		F193F4472A23C83D0044DABE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F19B0DC52A2F7A1C003FFDCD /* GenerateBillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateBillViewController.swift; sourceTree = "<group>"; };
+		F19B0DC72A2F8132003FFDCD /* GenerateBillViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GenerateBillViewController+TableView.swift"; sourceTree = "<group>"; };
+		F19B0DCA2A2F819A003FFDCD /* BillTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillTableViewCell.swift; sourceTree = "<group>"; };
+		F19B0DCB2A2F819A003FFDCD /* BillTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BillTableViewCell.xib; sourceTree = "<group>"; };
+		F19B0DCE2A2F880A003FFDCD /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
+		F19B0DD02A2F9880003FFDCD /* GenerateBillViewController+TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GenerateBillViewController+TextField.swift"; sourceTree = "<group>"; };
+		F19B0DD22A2F9F18003FFDCD /* AddNewVisitViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddNewVisitViewController+TableView.swift"; sourceTree = "<group>"; };
+		F1AC3A062A3D059400944E33 /* Firebase+Reservations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firebase+Reservations.swift"; sourceTree = "<group>"; };
+		F1AC3A082A3D0A8D00944E33 /* imgBonitaLetters.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imgBonitaLetters.png; sourceTree = "<group>"; };
+		F1AC3A0C2A3D0CBB00944E33 /* imgLogoBonita.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imgLogoBonita.png; sourceTree = "<group>"; };
+		F1AC3A0F2A3D112B00944E33 /* ReservationsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationsTableViewCell.swift; sourceTree = "<group>"; };
+		F1AC3A102A3D112B00944E33 /* ReservationsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReservationsTableViewCell.xib; sourceTree = "<group>"; };
+		F1AC3A132A3D225200944E33 /* imgCommentRightFull.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imgCommentRightFull.png; sourceTree = "<group>"; };
+		F1AC3A172A3D22B300944E33 /* imgCommentRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imgCommentRight.png; sourceTree = "<group>"; };
+		F1D4FC2F2A24D0D5000D8981 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F1D4FC312A251117000D8981 /* AddNewUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewUserViewController.swift; sourceTree = "<group>"; };
+		F1D4FC342A2600B3000D8981 /* HomeViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+TableView.swift"; sourceTree = "<group>"; };
+		F1D4FC362A260809000D8981 /* HomeViewController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+UI.swift"; sourceTree = "<group>"; };
+		F1D4FC382A2608E3000D8981 /* HomeViewController+Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+Search.swift"; sourceTree = "<group>"; };
+		F1D4FC3B2A26098A000D8981 /* UIString+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIString+Extensions.swift"; sourceTree = "<group>"; };
+		F1D4FC3D2A260E15000D8981 /* HomeViewController+Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+Navigation.swift"; sourceTree = "<group>"; };
+		F1D4FC3F2A2613FB000D8981 /* HomeViewController+MyNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+MyNotifications.swift"; sourceTree = "<group>"; };
+		F1D4FC442A266513000D8981 /* AddNewVisitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewVisitViewController.swift; sourceTree = "<group>"; };
+		F1D4FC492A266794000D8981 /* AddUserToVisitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserToVisitViewController.swift; sourceTree = "<group>"; };
+		F1D4FC4B2A2668ED000D8981 /* AddUserToVisitViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddUserToVisitViewController+TableView.swift"; sourceTree = "<group>"; };
+		F1F1FEE02A3C9B3F006CF26B /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		F1F1FEE22A3C9BF2006CF26B /* Firebase+Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firebase+Menu.swift"; sourceTree = "<group>"; };
+		F1F1FEE52A3CA92A006CF26B /* Firebase+Realtime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firebase+Realtime.swift"; sourceTree = "<group>"; };
+		F1F6DFCB2A44AC6100FC8794 /* Firebase+Tables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firebase+Tables.swift"; sourceTree = "<group>"; };
+		F1F6DFCD2A44AC7D00FC8794 /* Table.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Table.swift; sourceTree = "<group>"; };
+		F1F7F6D62A48973F00291273 /* AddNewVisitViewController+TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddNewVisitViewController+TextView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +169,135 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCEAE3D1EF98F7740C133428 /* Pods_BonitaBeachBar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7FADCFFC874F05648EF4370D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				80C524D6DFA5D995E5E7D6A4 /* Pods_BonitaBeachBar.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F11148AD2A31D8BA004CA5C1 /* VisitsTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				F11148AE2A31D8CB004CA5C1 /* VisitsTableViewCell.swift */,
+				F11148AF2A31D8CB004CA5C1 /* VisitsTableViewCell.xib */,
+			);
+			path = VisitsTableViewCell;
+			sourceTree = "<group>";
+		};
+		F11148B22A32177D004CA5C1 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				F11148B32A32178F004CA5C1 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		F11148C52A347CFB004CA5C1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F11148C62A347D00004CA5C1 /* BonitaPopup */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F11148C62A347D00004CA5C1 /* BonitaPopup */ = {
+			isa = PBXGroup;
+			children = (
+				F11148C72A347D19004CA5C1 /* BonitaPopupView.swift */,
+				F11148C92A347D26004CA5C1 /* BonitaPopupView.xib */,
+			);
+			path = BonitaPopup;
+			sourceTree = "<group>";
+		};
+		F11AFBC22A30B534005B3858 /* MyAssets */ = {
+			isa = PBXGroup;
+			children = (
+				F1AC3A132A3D225200944E33 /* imgCommentRightFull.png */,
+				F1AC3A082A3D0A8D00944E33 /* imgBonitaLetters.png */,
+				F11148AB2A31C8F6004CA5C1 /* arrowHead.png */,
+				F1AC3A172A3D22B300944E33 /* imgCommentRight.png */,
+				F1AC3A0C2A3D0CBB00944E33 /* imgLogoBonita.png */,
+				F11148C12A33683A004CA5C1 /* splash_screen_image.jpg */,
+				F11148BF2A3366E7004CA5C1 /* background_jungle_dark.jpg */,
+				F11148BD2A33385F004CA5C1 /* bonita_logo_heart.png */,
+				F11AFBC42A30B55C005B3858 /* bonita_logo.jpeg */,
+			);
+			path = MyAssets;
+			sourceTree = "<group>";
+		};
+		F11AFBC92A30BF4B005B3858 /* LoginViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F11AFBCA2A30BF61005B3858 /* LoginViewController.swift */,
+			);
+			path = LoginViewController;
+			sourceTree = "<group>";
+		};
+		F11AFBCE2A3104D6005B3858 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F1F1FEE42A3C9F59006CF26B /* LocalData */,
+				F11148B22A32177D004CA5C1 /* Constants */,
+				F11AFBD22A312059005B3858 /* UserService */,
+				F11AFBCF2A31054B005B3858 /* PersistenceService */,
+				F193F4222A2273110044DABE /* Firebase */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F11AFBCF2A31054B005B3858 /* PersistenceService */ = {
+			isa = PBXGroup;
+			children = (
+				F11AFBD02A310561005B3858 /* PersistenceService.swift */,
+			);
+			path = PersistenceService;
+			sourceTree = "<group>";
+		};
+		F11AFBD22A312059005B3858 /* UserService */ = {
+			isa = PBXGroup;
+			children = (
+				F11AFBD32A312066005B3858 /* UserService.swift */,
+			);
+			path = UserService;
+			sourceTree = "<group>";
+		};
+		F11AFBD52A314C31005B3858 /* UsersTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				F11148A72A31C481004CA5C1 /* UsersTableViewCell.swift */,
+				F11148A82A31C481004CA5C1 /* UsersTableViewCell.xib */,
+			);
+			path = UsersTableViewCell;
+			sourceTree = "<group>";
+		};
+		F13956FD2A42BA5A00503605 /* ReservatonViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F13956FE2A42BA8100503605 /* ReservationViewController.swift */,
+				F13957022A42E57800503605 /* ReservationViewController+TableView.swift */,
+				F13957052A42EADC00503605 /* ReservationViewController+TextView.swift */,
+			);
+			path = ReservatonViewController;
+			sourceTree = "<group>";
+		};
 		F193F4022A226BBE0044DABE = {
 			isa = PBXGroup;
 			children = (
+				F11AFBC22A30B534005B3858 /* MyAssets */,
+				F1D4FC2F2A24D0D5000D8981 /* GoogleService-Info.plist */,
 				F193F40D2A226BBE0044DABE /* BonitaBeachBar */,
 				F193F40C2A226BBE0044DABE /* Products */,
+				F37174B7FE38ADC6887E9E8A /* Pods */,
+				7FADCFFC874F05648EF4370D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +312,184 @@
 		F193F40D2A226BBE0044DABE /* BonitaBeachBar */ = {
 			isa = PBXGroup;
 			children = (
+				F11148C52A347CFB004CA5C1 /* Views */,
+				F11AFBCE2A3104D6005B3858 /* Services */,
+				F193F4442A23C6DE0044DABE /* ViewControllers */,
+				F193F42A2A227C4D0044DABE /* Model */,
+				F1D4FC3A2A26097D000D8981 /* Extensions */,
 				F193F40E2A226BBE0044DABE /* AppDelegate.swift */,
 				F193F4102A226BBE0044DABE /* SceneDelegate.swift */,
-				F193F4122A226BBE0044DABE /* ViewController.swift */,
 				F193F4142A226BBE0044DABE /* Main.storyboard */,
 				F193F4172A226BBF0044DABE /* Assets.xcassets */,
 				F193F4192A226BBF0044DABE /* LaunchScreen.storyboard */,
 				F193F41C2A226BC00044DABE /* Info.plist */,
+				F193F4372A23B6290044DABE /* MyNotification.swift */,
 			);
 			path = BonitaBeachBar;
+			sourceTree = "<group>";
+		};
+		F193F4222A2273110044DABE /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				F193F4232A2273270044DABE /* FirebaseService.swift */,
+				F193F4332A23B4110044DABE /* Firebase+Guests.swift */,
+				F193F4392A23B9290044DABE /* Firebase+Promo.swift */,
+				F193F43B2A23B9720044DABE /* Firebase+Master.swift */,
+				F193F43D2A23BB920044DABE /* Firebase+Bills.swift */,
+				F193F43F2A23BE9D0044DABE /* Firebase+AllUsers.swift */,
+				F193F4412A23BF660044DABE /* Firebase+Visits.swift */,
+				F1F1FEE22A3C9BF2006CF26B /* Firebase+Menu.swift */,
+				F1F1FEE52A3CA92A006CF26B /* Firebase+Realtime.swift */,
+				F1AC3A062A3D059400944E33 /* Firebase+Reservations.swift */,
+				F1F6DFCB2A44AC6100FC8794 /* Firebase+Tables.swift */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		F193F42A2A227C4D0044DABE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F193F42B2A227C5B0044DABE /* User.swift */,
+				F193F42D2A227CAC0044DABE /* Visit.swift */,
+				F193F42F2A227D670044DABE /* Bill.swift */,
+				F1F1FEE02A3C9B3F006CF26B /* MenuItem.swift */,
+				F127AD6D2A3DC21F0011102D /* Reservation.swift */,
+				F1F6DFCD2A44AC7D00FC8794 /* Table.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F193F4442A23C6DE0044DABE /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F1D4FC412A2664C9000D8981 /* Splash ViewController */,
+				F11AFBC92A30BF4B005B3858 /* LoginViewController */,
+				F1D4FC332A260092000D8981 /* HomeViewController */,
+				F1D4FC432A2664E2000D8981 /* AddNewVisitViewController */,
+				F19B0DC42A2F7A03003FFDCD /* GenerateBillViewController */,
+				F1D4FC482A266773000D8981 /* AddUserToVisit */,
+				F13956FD2A42BA5A00503605 /* ReservatonViewController */,
+				F1D4FC422A2664D2000D8981 /* UserViewController */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F19B0DC42A2F7A03003FFDCD /* GenerateBillViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F1F4DB052A3CD613006DC168 /* MenuItemTableViewCell */,
+				F19B0DC92A2F8167003FFDCD /* BillTableViewCell */,
+				F19B0DC52A2F7A1C003FFDCD /* GenerateBillViewController.swift */,
+				F19B0DD02A2F9880003FFDCD /* GenerateBillViewController+TextField.swift */,
+				F19B0DC72A2F8132003FFDCD /* GenerateBillViewController+TableView.swift */,
+			);
+			path = GenerateBillViewController;
+			sourceTree = "<group>";
+		};
+		F19B0DC92A2F8167003FFDCD /* BillTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				F19B0DCA2A2F819A003FFDCD /* BillTableViewCell.swift */,
+				F19B0DCB2A2F819A003FFDCD /* BillTableViewCell.xib */,
+			);
+			path = BillTableViewCell;
+			sourceTree = "<group>";
+		};
+		F1AC3A0E2A3D111400944E33 /* ReservationsTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				F1AC3A0F2A3D112B00944E33 /* ReservationsTableViewCell.swift */,
+				F1AC3A102A3D112B00944E33 /* ReservationsTableViewCell.xib */,
+			);
+			path = ReservationsTableViewCell;
+			sourceTree = "<group>";
+		};
+		F1D4FC332A260092000D8981 /* HomeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F1AC3A0E2A3D111400944E33 /* ReservationsTableViewCell */,
+				F11148AD2A31D8BA004CA5C1 /* VisitsTableViewCell */,
+				F11AFBD52A314C31005B3858 /* UsersTableViewCell */,
+				F193F4472A23C83D0044DABE /* HomeViewController.swift */,
+				F1D4FC362A260809000D8981 /* HomeViewController+UI.swift */,
+				F1D4FC382A2608E3000D8981 /* HomeViewController+Search.swift */,
+				F1D4FC342A2600B3000D8981 /* HomeViewController+TableView.swift */,
+				F1D4FC3D2A260E15000D8981 /* HomeViewController+Navigation.swift */,
+				F1D4FC3F2A2613FB000D8981 /* HomeViewController+MyNotifications.swift */,
+			);
+			path = HomeViewController;
+			sourceTree = "<group>";
+		};
+		F1D4FC3A2A26097D000D8981 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F1D4FC3B2A26098A000D8981 /* UIString+Extensions.swift */,
+				F19B0DCE2A2F880A003FFDCD /* Double+Extensions.swift */,
+				F11AFBCC2A30BFE6005B3858 /* UIView+Extensions.swift */,
+				F13957002A42C19F00503605 /* UIDatePicker+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F1D4FC412A2664C9000D8981 /* Splash ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F193F4452A23C6F80044DABE /* SplashViewController.swift */,
+			);
+			path = "Splash ViewController";
+			sourceTree = "<group>";
+		};
+		F1D4FC422A2664D2000D8981 /* UserViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F1D4FC312A251117000D8981 /* AddNewUserViewController.swift */,
+				F11148BB2A333054004CA5C1 /* AddNewUser+TableView.swift */,
+				F11148CB2A3481AE004CA5C1 /* AddNewUser+Popup.swift */,
+			);
+			path = UserViewController;
+			sourceTree = "<group>";
+		};
+		F1D4FC432A2664E2000D8981 /* AddNewVisitViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F1D4FC442A266513000D8981 /* AddNewVisitViewController.swift */,
+				F19B0DD22A2F9F18003FFDCD /* AddNewVisitViewController+TableView.swift */,
+				F1F7F6D62A48973F00291273 /* AddNewVisitViewController+TextView.swift */,
+			);
+			path = AddNewVisitViewController;
+			sourceTree = "<group>";
+		};
+		F1D4FC482A266773000D8981 /* AddUserToVisit */ = {
+			isa = PBXGroup;
+			children = (
+				F1D4FC492A266794000D8981 /* AddUserToVisitViewController.swift */,
+				F1D4FC4B2A2668ED000D8981 /* AddUserToVisitViewController+TableView.swift */,
+			);
+			path = AddUserToVisit;
+			sourceTree = "<group>";
+		};
+		F1F1FEE42A3C9F59006CF26B /* LocalData */ = {
+			isa = PBXGroup;
+			children = (
+				F193F4352A23B4A10044DABE /* LocalData.swift */,
+			);
+			path = LocalData;
+			sourceTree = "<group>";
+		};
+		F1F4DB052A3CD613006DC168 /* MenuItemTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MenuItemTableViewCell;
+			sourceTree = "<group>";
+		};
+		F37174B7FE38ADC6887E9E8A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C95D1C12B55C55188D8EBBC3 /* Pods-BonitaBeachBar.debug.xcconfig */,
+				52DC7557AC6F3B8238AAED2D /* Pods-BonitaBeachBar.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +499,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F193F41F2A226BC00044DABE /* Build configuration list for PBXNativeTarget "BonitaBeachBar" */;
 			buildPhases = (
+				E06259A24D0B1183273F334E /* [CP] Check Pods Manifest.lock */,
 				F193F4072A226BBE0044DABE /* Sources */,
 				F193F4082A226BBE0044DABE /* Frameworks */,
 				F193F4092A226BBE0044DABE /* Resources */,
+				B9E403E72A19B13227687EE0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,21 +553,130 @@
 			buildActionMask = 2147483647;
 			files = (
 				F193F41B2A226BBF0044DABE /* LaunchScreen.storyboard in Resources */,
+				F1D4FC302A24D0D5000D8981 /* GoogleService-Info.plist in Resources */,
+				F11148C22A33683A004CA5C1 /* splash_screen_image.jpg in Resources */,
+				F1AC3A152A3D225300944E33 /* imgCommentRightFull.png in Resources */,
+				F11148AA2A31C481004CA5C1 /* UsersTableViewCell.xib in Resources */,
+				F11148BE2A33385F004CA5C1 /* bonita_logo_heart.png in Resources */,
+				F11AFBC62A30B55C005B3858 /* bonita_logo.jpeg in Resources */,
+				F1AC3A122A3D112B00944E33 /* ReservationsTableViewCell.xib in Resources */,
+				F1AC3A092A3D0A8D00944E33 /* imgBonitaLetters.png in Resources */,
+				F11148B12A31D8CB004CA5C1 /* VisitsTableViewCell.xib in Resources */,
+				F11148CA2A347D26004CA5C1 /* BonitaPopupView.xib in Resources */,
+				F11148AC2A31C8F6004CA5C1 /* arrowHead.png in Resources */,
+				F1AC3A182A3D22B300944E33 /* imgCommentRight.png in Resources */,
+				F1AC3A0D2A3D0CBB00944E33 /* imgLogoBonita.png in Resources */,
+				F11148C02A3366E7004CA5C1 /* background_jungle_dark.jpg in Resources */,
 				F193F4182A226BBF0044DABE /* Assets.xcassets in Resources */,
+				F19B0DCD2A2F819A003FFDCD /* BillTableViewCell.xib in Resources */,
 				F193F4162A226BBE0044DABE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B9E403E72A19B13227687EE0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BonitaBeachBar/Pods-BonitaBeachBar-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BonitaBeachBar/Pods-BonitaBeachBar-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BonitaBeachBar/Pods-BonitaBeachBar-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E06259A24D0B1183273F334E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BonitaBeachBar-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F193F4072A226BBE0044DABE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F193F4132A226BBE0044DABE /* ViewController.swift in Sources */,
+				F1F1FEE62A3CA92A006CF26B /* Firebase+Realtime.swift in Sources */,
+				F193F43A2A23B9290044DABE /* Firebase+Promo.swift in Sources */,
+				F19B0DD32A2F9F18003FFDCD /* AddNewVisitViewController+TableView.swift in Sources */,
+				F1D4FC3E2A260E15000D8981 /* HomeViewController+Navigation.swift in Sources */,
+				F193F42C2A227C5B0044DABE /* User.swift in Sources */,
+				F193F4362A23B4A10044DABE /* LocalData.swift in Sources */,
+				F19B0DCC2A2F819A003FFDCD /* BillTableViewCell.swift in Sources */,
+				F1D4FC372A260809000D8981 /* HomeViewController+UI.swift in Sources */,
+				F11AFBCD2A30BFE6005B3858 /* UIView+Extensions.swift in Sources */,
+				F1AC3A072A3D059400944E33 /* Firebase+Reservations.swift in Sources */,
+				F19B0DD12A2F9880003FFDCD /* GenerateBillViewController+TextField.swift in Sources */,
+				F11AFBD12A310561005B3858 /* PersistenceService.swift in Sources */,
+				F13956FF2A42BA8100503605 /* ReservationViewController.swift in Sources */,
+				F193F4482A23C83D0044DABE /* HomeViewController.swift in Sources */,
+				F19B0DCF2A2F880A003FFDCD /* Double+Extensions.swift in Sources */,
+				F127AD6E2A3DC21F0011102D /* Reservation.swift in Sources */,
+				F1F7F6D72A48973F00291273 /* AddNewVisitViewController+TextView.swift in Sources */,
+				F1F1FEE12A3C9B3F006CF26B /* MenuItem.swift in Sources */,
+				F11148C82A347D19004CA5C1 /* BonitaPopupView.swift in Sources */,
+				F1AC3A112A3D112B00944E33 /* ReservationsTableViewCell.swift in Sources */,
+				F193F4342A23B4110044DABE /* Firebase+Guests.swift in Sources */,
+				F193F43E2A23BB920044DABE /* Firebase+Bills.swift in Sources */,
+				F11AFBD42A312066005B3858 /* UserService.swift in Sources */,
 				F193F40F2A226BBE0044DABE /* AppDelegate.swift in Sources */,
+				F193F4242A2273270044DABE /* FirebaseService.swift in Sources */,
+				F193F43C2A23B9720044DABE /* Firebase+Master.swift in Sources */,
+				F1D4FC3C2A26098A000D8981 /* UIString+Extensions.swift in Sources */,
+				F193F4302A227D670044DABE /* Bill.swift in Sources */,
+				F11148B42A32178F004CA5C1 /* Constants.swift in Sources */,
+				F11148B02A31D8CB004CA5C1 /* VisitsTableViewCell.swift in Sources */,
+				F193F4402A23BE9D0044DABE /* Firebase+AllUsers.swift in Sources */,
+				F1D4FC402A2613FB000D8981 /* HomeViewController+MyNotifications.swift in Sources */,
+				F11148A92A31C481004CA5C1 /* UsersTableViewCell.swift in Sources */,
+				F1D4FC392A2608E3000D8981 /* HomeViewController+Search.swift in Sources */,
 				F193F4112A226BBE0044DABE /* SceneDelegate.swift in Sources */,
+				F11148CC2A3481AE004CA5C1 /* AddNewUser+Popup.swift in Sources */,
+				F19B0DC82A2F8132003FFDCD /* GenerateBillViewController+TableView.swift in Sources */,
+				F193F4382A23B6290044DABE /* MyNotification.swift in Sources */,
+				F11148BC2A333054004CA5C1 /* AddNewUser+TableView.swift in Sources */,
+				F193F4422A23BF660044DABE /* Firebase+Visits.swift in Sources */,
+				F19B0DC62A2F7A1C003FFDCD /* GenerateBillViewController.swift in Sources */,
+				F193F42E2A227CAC0044DABE /* Visit.swift in Sources */,
+				F1D4FC452A266513000D8981 /* AddNewVisitViewController.swift in Sources */,
+				F1F6DFCC2A44AC6100FC8794 /* Firebase+Tables.swift in Sources */,
+				F13957032A42E57800503605 /* ReservationViewController+TableView.swift in Sources */,
+				F13957062A42EADC00503605 /* ReservationViewController+TextView.swift in Sources */,
+				F1D4FC322A251117000D8981 /* AddNewUserViewController.swift in Sources */,
+				F193F4462A23C6F80044DABE /* SplashViewController.swift in Sources */,
+				F1F1FEE32A3C9BF2006CF26B /* Firebase+Menu.swift in Sources */,
+				F1F6DFCE2A44AC7D00FC8794 /* Table.swift in Sources */,
+				F11AFBCB2A30BF61005B3858 /* LoginViewController.swift in Sources */,
+				F1D4FC4A2A266794000D8981 /* AddUserToVisitViewController.swift in Sources */,
+				F13957012A42C19F00503605 /* UIDatePicker+Extensions.swift in Sources */,
+				F1D4FC4C2A2668ED000D8981 /* AddUserToVisitViewController+TableView.swift in Sources */,
+				F1D4FC352A2600B3000D8981 /* HomeViewController+TableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,19 +818,22 @@
 		};
 		F193F4202A226BC00044DABE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C95D1C12B55C55188D8EBBC3 /* Pods-BonitaBeachBar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 345PVUQV4D;
+				DEVELOPMENT_TEAM = 7M86T7GAGU;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BonitaBeachBar/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Bonita Beach Bar";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -310,19 +849,22 @@
 		};
 		F193F4212A226BC00044DABE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52DC7557AC6F3B8238AAED2D /* Pods-BonitaBeachBar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 345PVUQV4D;
+				DEVELOPMENT_TEAM = 7M86T7GAGU;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BonitaBeachBar/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Bonita Beach Bar";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
