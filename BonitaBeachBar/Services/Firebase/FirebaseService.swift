@@ -10,8 +10,11 @@ import Firebase
 import FirebaseCore
 import FirebaseFirestore
 //https://bonitabeachbar-29148-default-rtdb.europe-west1.firebasedatabase.app/
+
 class FirebaseService {
     let firestore: Firestore = Firestore.firestore()
+    let realtimeDatabase: DatabaseReference = Database.database(url: realtimeDatabaseUrl).reference()
+    private static let realtimeDatabaseUrl = "https://bonitabeachbar-29148-default-rtdb.europe-west1.firebasedatabase.app/"
 
     func firebaseAuthenticateAndFetchAllData(completion: @escaping (_ success: Bool, _ error: Error?) -> Void) {
         Auth.auth().signInAnonymously { (authDataResult, error) in

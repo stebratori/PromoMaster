@@ -16,7 +16,18 @@ extension HomeViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)),
                                                name: UIResponder.keyboardWillHideNotification,
                                                object: nil)
-    }
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(notificationReservationsChange),
+                                               name: Notification.Name(MyNotificationType.realtimeChangeReservation.rawValue),
+                                               object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(realtimeChangeTableViewReload),
+                                               name: Notification.Name(MyNotificationType.realtimeChangeVisit.rawValue),
+                                               object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(realtimeChangeTableViewReload),
+                                               name: Notification.Name(MyNotificationType.realtimeChangeReloadData.rawValue),
+                                               object: nil)
+}
 
     @objc
     private func keyboardWillShow(notification: NSNotification) {
@@ -28,5 +39,16 @@ extension HomeViewController {
     @objc
     private func keyboardWillHide(notification: NSNotification) {
         tableView.contentInset = .zero
+    }
+    
+    @objc
+    private func notificationReservationsChange() {
+        getReservationDatesAndShowReservations()
+        setPreviousBookingsNotificationIfNeeded()
+    }
+    
+    @objc
+    private func realtimeChangeTableViewReload() {
+        refreshTableViewData()
     }
 }

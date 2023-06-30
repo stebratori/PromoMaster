@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension AddNewUserViewController: BonitaPopupDelegate {
+extension UserViewController: BonitaPopupDelegate {
     func logout() {
         UserService.shared.logOut(viewController: self)
     }

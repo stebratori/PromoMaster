@@ -28,6 +28,17 @@ class User {
         return total
     }
     
+    func getMonthlySum(month: Int, year: Int) -> Double {
+        let monthlyVisits = getAllVisitsForMonthAboveMin(month: month, year: year)
+        var total: Double = 0.0
+        for visit in monthlyVisits {
+            if let bill = visit.bill {
+                total += bill.total
+            }
+        }
+        return total
+    }
+    
     func populateVisits() {
         visits?.removeAll()
         switch type {
@@ -101,6 +112,66 @@ class User {
         if let phone = data["phone"] as? String {
             self.phone = phone
         }
+    }
+    
+    func getAllVisitDates() -> [Date] {
+        guard let visits = visits else { return [] }
+        var visitDates: [Date] = []
+        for visit in visits {
+            if let date = visit.date.toDate(), !visitDates.contains(date) {
+                visitDates.append(date)
+            }
+        }
+        return visitDates.sorted(by: { $0 < $1 })
+    }
+    
+    func getVisitsForDate(date: Date) -> [Visit] {
+        guard let visits = visits else { return [] }
+        var visitsForDate: [Visit] = []
+        for visit in visits where date.stringDate() == visit.date {
+            visitsForDate.append(visit)
+        }
+        return visitsForDate
+    }
+    
+    func getVisitMonths() -> [(month: Int, year: Int)] {
+        guard let visits = visits else { return [] }
+        var visitMonths: [(month: Int, year: Int)] = []
+        for visit in visits {
+            if let date = visit.date.toDate() {
+                let dateComponents = Calendar.current.dateComponents([.month, .year], from: date)
+                if let month = dateComponents.month, let year = dateComponents.year {
+                    let visitDate: (Int, Int) = (month, year)
+                    var alreadyAdded: Bool = false
+                    for visitMonth in visitMonths {
+                        if visitMonth.month == month && visitMonth.year == year {
+                            alreadyAdded = true
+                        }
+                    }
+                    if !alreadyAdded {
+                        visitMonths.append(visitDate)
+                    }
+                }
+            }
+        }
+        // TODO: Sort by YEARS
+        return visitMonths.sorted(by: {$0.month < $1.month})
+    }
+    
+    func getAllVisitsForMonthAboveMin(month: Int, year: Int) -> [Visit] {
+        guard let visits = visits else { return [] }
+        var monthlyVisits: [Visit] = []
+        for visit in visits {
+            if let visitDate = visit.date.toDate() {
+                let visitDateComponents = Calendar.current.dateComponents([.month, .year], from: visitDate)
+                if visitDateComponents.month == month && visitDateComponents.year == year,
+                   let total = visit.bill?.total,
+                   total > LocalData.shared.promoMin {
+                    monthlyVisits.append(visit)
+                }
+            }
+        }
+        return monthlyVisits
     }
 }
 

@@ -36,6 +36,26 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         }
     }
     
+    //
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        if dataType == .reservations {
+            return true
+        } else {
+            return false
+        }
+    }
+
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if dataType == .reservations, tableView == self.tableView, editingStyle == .delete {
+            if let reservation = bonitaDataSource[indexPath.row] as? Reservation {
+                firebaseService.deleteReservation(reservation: reservation) { success in
+                    self.firebaseService.realtimeReservationChange()
+                }
+            }
+        }
+    }
+    
+    //
     private func getUsersCell(forRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "UsersTableViewCell", for: indexPath) as! UsersTableViewCell
         if let user = bonitaDataSource[indexPath.row] as? User {
@@ -121,16 +141,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func showAllReservationsInTableView() {
-        guard let allReservations = LocalData.shared.reservations else { return }
-        var reservations: [Reservation] = []
-        for reservation in allReservations where reservation.isForDate(date: currentReservationsDate) {
-            reservations.append(reservation)
-        }
-        bonitaDataSource = reservations
-        preFilteredDataSource = reservations
-        tableView.reloadData()
-        checkPreviousAndNextDayReservations()
         setupReservationsDayAndDate()
+        tableView.reloadData()
     }
 
 

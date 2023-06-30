@@ -27,17 +27,20 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var btnMasterStaff: UIButton!
     @IBOutlet weak var lblPreviousBookingsNotification: UILabel!
     
-    
-    var currentReservationsDate: Date = Date()
+    var allReservationDates: [Date]?
+    var currentReservationsDate: Date?
     var dataType: BonitaDataType = .reservations
     var bonitaDataSource: [Any] = []
     var preFilteredDataSource: [Any] = []
     let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+    var firebaseService: FirebaseService = FirebaseService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.delegate = self
         subscribeToMyNotifications()
+        getReservationDatesAndShowReservations()
+        firebaseService.setupListeners()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -52,6 +55,16 @@ class HomeViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
+    func getReservationDatesAndShowReservations() {
+        allReservationDates = LocalData.shared.getAllReservationDates()
+        if LocalData.shared.getReservationsForDate(date: Date()).count > 0 {
+            currentReservationsDate = Date()
+        } else {
+            currentReservationsDate = allReservationDates?.last
+        }
+        showReservationsForSelectedDate()
     }
     
     // ADD
@@ -102,17 +115,11 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func showPreviousDayReservations(_ sender: UIButton) {
-        if let previousDay = currentReservationsDate.previousDay() {
-            currentReservationsDate = previousDay
-            showAllReservationsInTableView()
-        }
+        showPreviousDayReservations()
     }
     
     @IBAction func showNextDayReservations(_ sender: UIButton) {
-        if let nextDay = currentReservationsDate.nextDay() {
-            currentReservationsDate = nextDay
-            showAllReservationsInTableView()
-        }
+        showNextDayReservations()
     }
     
     @IBAction func showMasterStaff(_ sender: UIButton) {

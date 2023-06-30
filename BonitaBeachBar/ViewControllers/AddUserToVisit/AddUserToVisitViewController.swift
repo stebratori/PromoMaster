@@ -51,7 +51,7 @@ class AddUserToVisitViewController: UIViewController {
     }
     
     @IBAction func addNewGuest(_ sender: UIButton) {
-        if let vc = storyBoard.instantiateViewController(withIdentifier: "AddNewUserViewController") as? AddNewUserViewController {
+        if let vc = storyBoard.instantiateViewController(withIdentifier: "AddNewUserViewController") as? UserViewController {
             vc.type = userType
             vc.backToHomeScreen = false
             vc.unwindDestinationVC = self

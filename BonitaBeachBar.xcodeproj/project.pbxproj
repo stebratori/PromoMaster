@@ -14,13 +14,13 @@
 		F11148B02A31D8CB004CA5C1 /* VisitsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11148AE2A31D8CB004CA5C1 /* VisitsTableViewCell.swift */; };
 		F11148B12A31D8CB004CA5C1 /* VisitsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F11148AF2A31D8CB004CA5C1 /* VisitsTableViewCell.xib */; };
 		F11148B42A32178F004CA5C1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11148B32A32178F004CA5C1 /* Constants.swift */; };
-		F11148BC2A333054004CA5C1 /* AddNewUser+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11148BB2A333054004CA5C1 /* AddNewUser+TableView.swift */; };
+		F11148BC2A333054004CA5C1 /* UserViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11148BB2A333054004CA5C1 /* UserViewController+TableView.swift */; };
 		F11148BE2A33385F004CA5C1 /* bonita_logo_heart.png in Resources */ = {isa = PBXBuildFile; fileRef = F11148BD2A33385F004CA5C1 /* bonita_logo_heart.png */; };
 		F11148C02A3366E7004CA5C1 /* background_jungle_dark.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F11148BF2A3366E7004CA5C1 /* background_jungle_dark.jpg */; };
 		F11148C22A33683A004CA5C1 /* splash_screen_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F11148C12A33683A004CA5C1 /* splash_screen_image.jpg */; };
 		F11148C82A347D19004CA5C1 /* BonitaPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11148C72A347D19004CA5C1 /* BonitaPopupView.swift */; };
 		F11148CA2A347D26004CA5C1 /* BonitaPopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F11148C92A347D26004CA5C1 /* BonitaPopupView.xib */; };
-		F11148CC2A3481AE004CA5C1 /* AddNewUser+Popup.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11148CB2A3481AE004CA5C1 /* AddNewUser+Popup.swift */; };
+		F11148CC2A3481AE004CA5C1 /* UserViewController+Popup.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11148CB2A3481AE004CA5C1 /* UserViewController+Popup.swift */; };
 		F11AFBC62A30B55C005B3858 /* bonita_logo.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F11AFBC42A30B55C005B3858 /* bonita_logo.jpeg */; };
 		F11AFBCB2A30BF61005B3858 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11AFBCA2A30BF61005B3858 /* LoginViewController.swift */; };
 		F11AFBCD2A30BFE6005B3858 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11AFBCC2A30BFE6005B3858 /* UIView+Extensions.swift */; };
@@ -65,7 +65,7 @@
 		F1AC3A152A3D225300944E33 /* imgCommentRightFull.png in Resources */ = {isa = PBXBuildFile; fileRef = F1AC3A132A3D225200944E33 /* imgCommentRightFull.png */; };
 		F1AC3A182A3D22B300944E33 /* imgCommentRight.png in Resources */ = {isa = PBXBuildFile; fileRef = F1AC3A172A3D22B300944E33 /* imgCommentRight.png */; };
 		F1D4FC302A24D0D5000D8981 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F1D4FC2F2A24D0D5000D8981 /* GoogleService-Info.plist */; };
-		F1D4FC322A251117000D8981 /* AddNewUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D4FC312A251117000D8981 /* AddNewUserViewController.swift */; };
+		F1D4FC322A251117000D8981 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D4FC312A251117000D8981 /* UserViewController.swift */; };
 		F1D4FC352A2600B3000D8981 /* HomeViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D4FC342A2600B3000D8981 /* HomeViewController+TableView.swift */; };
 		F1D4FC372A260809000D8981 /* HomeViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D4FC362A260809000D8981 /* HomeViewController+UI.swift */; };
 		F1D4FC392A2608E3000D8981 /* HomeViewController+Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D4FC382A2608E3000D8981 /* HomeViewController+Search.swift */; };
@@ -75,12 +75,22 @@
 		F1D4FC452A266513000D8981 /* AddNewVisitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D4FC442A266513000D8981 /* AddNewVisitViewController.swift */; };
 		F1D4FC4A2A266794000D8981 /* AddUserToVisitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D4FC492A266794000D8981 /* AddUserToVisitViewController.swift */; };
 		F1D4FC4C2A2668ED000D8981 /* AddUserToVisitViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D4FC4B2A2668ED000D8981 /* AddUserToVisitViewController+TableView.swift */; };
+		F1D65AA42A4AA1F5008191CF /* Firebase+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D65AA32A4AA1F5008191CF /* Firebase+Constants.swift */; };
+		F1D65AA62A4AEAC8008191CF /* UserViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D65AA52A4AEAC8008191CF /* UserViewController+UI.swift */; };
+		F1D65AA82A4AEEC8008191CF /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D65AA72A4AEEC8008191CF /* Date+Extensions.swift */; };
+		F1D65AAA2A4AF0F6008191CF /* LocalData+Reservations.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D65AA92A4AF0F6008191CF /* LocalData+Reservations.swift */; };
+		F1D65AAC2A4AF129008191CF /* LocalData+Visits.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D65AAB2A4AF129008191CF /* LocalData+Visits.swift */; };
+		F1D65AAE2A4AF14A008191CF /* LocalData+Tables.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D65AAD2A4AF14A008191CF /* LocalData+Tables.swift */; };
+		F1D65AB02A4AF165008191CF /* LocalData+Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D65AAF2A4AF165008191CF /* LocalData+Bill.swift */; };
+		F1D65AB22A4AF179008191CF /* LocalData+Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D65AB12A4AF179008191CF /* LocalData+Users.swift */; };
+		F1D65AB42A4AFEA8008191CF /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D65AB32A4AFEA8008191CF /* Int+Extensions.swift */; };
 		F1F1FEE12A3C9B3F006CF26B /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F1FEE02A3C9B3F006CF26B /* MenuItem.swift */; };
 		F1F1FEE32A3C9BF2006CF26B /* Firebase+Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F1FEE22A3C9BF2006CF26B /* Firebase+Menu.swift */; };
 		F1F1FEE62A3CA92A006CF26B /* Firebase+Realtime.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F1FEE52A3CA92A006CF26B /* Firebase+Realtime.swift */; };
 		F1F6DFCC2A44AC6100FC8794 /* Firebase+Tables.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F6DFCB2A44AC6100FC8794 /* Firebase+Tables.swift */; };
 		F1F6DFCE2A44AC7D00FC8794 /* Table.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F6DFCD2A44AC7D00FC8794 /* Table.swift */; };
 		F1F7F6D72A48973F00291273 /* AddNewVisitViewController+TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F7F6D62A48973F00291273 /* AddNewVisitViewController+TextView.swift */; };
+		F1FBA5C72A4EDF4B00231F51 /* Firebase+RealtimeDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FBA5C62A4EDF4B00231F51 /* Firebase+RealtimeDatabase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,13 +103,13 @@
 		F11148AE2A31D8CB004CA5C1 /* VisitsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitsTableViewCell.swift; sourceTree = "<group>"; };
 		F11148AF2A31D8CB004CA5C1 /* VisitsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VisitsTableViewCell.xib; sourceTree = "<group>"; };
 		F11148B32A32178F004CA5C1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		F11148BB2A333054004CA5C1 /* AddNewUser+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddNewUser+TableView.swift"; sourceTree = "<group>"; };
+		F11148BB2A333054004CA5C1 /* UserViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserViewController+TableView.swift"; sourceTree = "<group>"; };
 		F11148BD2A33385F004CA5C1 /* bonita_logo_heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bonita_logo_heart.png; sourceTree = "<group>"; };
 		F11148BF2A3366E7004CA5C1 /* background_jungle_dark.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background_jungle_dark.jpg; sourceTree = "<group>"; };
 		F11148C12A33683A004CA5C1 /* splash_screen_image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = splash_screen_image.jpg; sourceTree = "<group>"; };
 		F11148C72A347D19004CA5C1 /* BonitaPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonitaPopupView.swift; sourceTree = "<group>"; };
 		F11148C92A347D26004CA5C1 /* BonitaPopupView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BonitaPopupView.xib; sourceTree = "<group>"; };
-		F11148CB2A3481AE004CA5C1 /* AddNewUser+Popup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddNewUser+Popup.swift"; sourceTree = "<group>"; };
+		F11148CB2A3481AE004CA5C1 /* UserViewController+Popup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserViewController+Popup.swift"; sourceTree = "<group>"; };
 		F11AFBC42A30B55C005B3858 /* bonita_logo.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bonita_logo.jpeg; sourceTree = "<group>"; };
 		F11AFBCA2A30BF61005B3858 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F11AFBCC2A30BFE6005B3858 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
@@ -146,7 +156,7 @@
 		F1AC3A132A3D225200944E33 /* imgCommentRightFull.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imgCommentRightFull.png; sourceTree = "<group>"; };
 		F1AC3A172A3D22B300944E33 /* imgCommentRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imgCommentRight.png; sourceTree = "<group>"; };
 		F1D4FC2F2A24D0D5000D8981 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		F1D4FC312A251117000D8981 /* AddNewUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewUserViewController.swift; sourceTree = "<group>"; };
+		F1D4FC312A251117000D8981 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		F1D4FC342A2600B3000D8981 /* HomeViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+TableView.swift"; sourceTree = "<group>"; };
 		F1D4FC362A260809000D8981 /* HomeViewController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+UI.swift"; sourceTree = "<group>"; };
 		F1D4FC382A2608E3000D8981 /* HomeViewController+Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+Search.swift"; sourceTree = "<group>"; };
@@ -156,12 +166,22 @@
 		F1D4FC442A266513000D8981 /* AddNewVisitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewVisitViewController.swift; sourceTree = "<group>"; };
 		F1D4FC492A266794000D8981 /* AddUserToVisitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserToVisitViewController.swift; sourceTree = "<group>"; };
 		F1D4FC4B2A2668ED000D8981 /* AddUserToVisitViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddUserToVisitViewController+TableView.swift"; sourceTree = "<group>"; };
+		F1D65AA32A4AA1F5008191CF /* Firebase+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firebase+Constants.swift"; sourceTree = "<group>"; };
+		F1D65AA52A4AEAC8008191CF /* UserViewController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserViewController+UI.swift"; sourceTree = "<group>"; };
+		F1D65AA72A4AEEC8008191CF /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		F1D65AA92A4AF0F6008191CF /* LocalData+Reservations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocalData+Reservations.swift"; sourceTree = "<group>"; };
+		F1D65AAB2A4AF129008191CF /* LocalData+Visits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocalData+Visits.swift"; sourceTree = "<group>"; };
+		F1D65AAD2A4AF14A008191CF /* LocalData+Tables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocalData+Tables.swift"; sourceTree = "<group>"; };
+		F1D65AAF2A4AF165008191CF /* LocalData+Bill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocalData+Bill.swift"; sourceTree = "<group>"; };
+		F1D65AB12A4AF179008191CF /* LocalData+Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocalData+Users.swift"; sourceTree = "<group>"; };
+		F1D65AB32A4AFEA8008191CF /* Int+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
 		F1F1FEE02A3C9B3F006CF26B /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		F1F1FEE22A3C9BF2006CF26B /* Firebase+Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firebase+Menu.swift"; sourceTree = "<group>"; };
 		F1F1FEE52A3CA92A006CF26B /* Firebase+Realtime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firebase+Realtime.swift"; sourceTree = "<group>"; };
 		F1F6DFCB2A44AC6100FC8794 /* Firebase+Tables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firebase+Tables.swift"; sourceTree = "<group>"; };
 		F1F6DFCD2A44AC7D00FC8794 /* Table.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Table.swift; sourceTree = "<group>"; };
 		F1F7F6D62A48973F00291273 /* AddNewVisitViewController+TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddNewVisitViewController+TextView.swift"; sourceTree = "<group>"; };
+		F1FBA5C62A4EDF4B00231F51 /* Firebase+RealtimeDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firebase+RealtimeDatabase.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -332,6 +352,7 @@
 			isa = PBXGroup;
 			children = (
 				F193F4232A2273270044DABE /* FirebaseService.swift */,
+				F1FBA5C62A4EDF4B00231F51 /* Firebase+RealtimeDatabase.swift */,
 				F193F4332A23B4110044DABE /* Firebase+Guests.swift */,
 				F193F4392A23B9290044DABE /* Firebase+Promo.swift */,
 				F193F43B2A23B9720044DABE /* Firebase+Master.swift */,
@@ -342,6 +363,7 @@
 				F1F1FEE52A3CA92A006CF26B /* Firebase+Realtime.swift */,
 				F1AC3A062A3D059400944E33 /* Firebase+Reservations.swift */,
 				F1F6DFCB2A44AC6100FC8794 /* Firebase+Tables.swift */,
+				F1D65AA32A4AA1F5008191CF /* Firebase+Constants.swift */,
 			);
 			path = Firebase;
 			sourceTree = "<group>";
@@ -427,6 +449,8 @@
 				F19B0DCE2A2F880A003FFDCD /* Double+Extensions.swift */,
 				F11AFBCC2A30BFE6005B3858 /* UIView+Extensions.swift */,
 				F13957002A42C19F00503605 /* UIDatePicker+Extensions.swift */,
+				F1D65AA72A4AEEC8008191CF /* Date+Extensions.swift */,
+				F1D65AB32A4AFEA8008191CF /* Int+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -442,9 +466,10 @@
 		F1D4FC422A2664D2000D8981 /* UserViewController */ = {
 			isa = PBXGroup;
 			children = (
-				F1D4FC312A251117000D8981 /* AddNewUserViewController.swift */,
-				F11148BB2A333054004CA5C1 /* AddNewUser+TableView.swift */,
-				F11148CB2A3481AE004CA5C1 /* AddNewUser+Popup.swift */,
+				F1D4FC312A251117000D8981 /* UserViewController.swift */,
+				F1D65AA52A4AEAC8008191CF /* UserViewController+UI.swift */,
+				F11148BB2A333054004CA5C1 /* UserViewController+TableView.swift */,
+				F11148CB2A3481AE004CA5C1 /* UserViewController+Popup.swift */,
 			);
 			path = UserViewController;
 			sourceTree = "<group>";
@@ -472,6 +497,11 @@
 			isa = PBXGroup;
 			children = (
 				F193F4352A23B4A10044DABE /* LocalData.swift */,
+				F1D65AB12A4AF179008191CF /* LocalData+Users.swift */,
+				F1D65AA92A4AF0F6008191CF /* LocalData+Reservations.swift */,
+				F1D65AAB2A4AF129008191CF /* LocalData+Visits.swift */,
+				F1D65AAD2A4AF14A008191CF /* LocalData+Tables.swift */,
+				F1D65AAF2A4AF165008191CF /* LocalData+Bill.swift */,
 			);
 			path = LocalData;
 			sourceTree = "<group>";
@@ -636,12 +666,14 @@
 				F11AFBD12A310561005B3858 /* PersistenceService.swift in Sources */,
 				F13956FF2A42BA8100503605 /* ReservationViewController.swift in Sources */,
 				F193F4482A23C83D0044DABE /* HomeViewController.swift in Sources */,
+				F1FBA5C72A4EDF4B00231F51 /* Firebase+RealtimeDatabase.swift in Sources */,
 				F19B0DCF2A2F880A003FFDCD /* Double+Extensions.swift in Sources */,
 				F127AD6E2A3DC21F0011102D /* Reservation.swift in Sources */,
 				F1F7F6D72A48973F00291273 /* AddNewVisitViewController+TextView.swift in Sources */,
 				F1F1FEE12A3C9B3F006CF26B /* MenuItem.swift in Sources */,
 				F11148C82A347D19004CA5C1 /* BonitaPopupView.swift in Sources */,
 				F1AC3A112A3D112B00944E33 /* ReservationsTableViewCell.swift in Sources */,
+				F1D65AA42A4AA1F5008191CF /* Firebase+Constants.swift in Sources */,
 				F193F4342A23B4110044DABE /* Firebase+Guests.swift in Sources */,
 				F193F43E2A23BB920044DABE /* Firebase+Bills.swift in Sources */,
 				F11AFBD42A312066005B3858 /* UserService.swift in Sources */,
@@ -652,27 +684,35 @@
 				F193F4302A227D670044DABE /* Bill.swift in Sources */,
 				F11148B42A32178F004CA5C1 /* Constants.swift in Sources */,
 				F11148B02A31D8CB004CA5C1 /* VisitsTableViewCell.swift in Sources */,
+				F1D65AAC2A4AF129008191CF /* LocalData+Visits.swift in Sources */,
 				F193F4402A23BE9D0044DABE /* Firebase+AllUsers.swift in Sources */,
 				F1D4FC402A2613FB000D8981 /* HomeViewController+MyNotifications.swift in Sources */,
+				F1D65AA62A4AEAC8008191CF /* UserViewController+UI.swift in Sources */,
 				F11148A92A31C481004CA5C1 /* UsersTableViewCell.swift in Sources */,
 				F1D4FC392A2608E3000D8981 /* HomeViewController+Search.swift in Sources */,
 				F193F4112A226BBE0044DABE /* SceneDelegate.swift in Sources */,
-				F11148CC2A3481AE004CA5C1 /* AddNewUser+Popup.swift in Sources */,
+				F1D65AAA2A4AF0F6008191CF /* LocalData+Reservations.swift in Sources */,
+				F11148CC2A3481AE004CA5C1 /* UserViewController+Popup.swift in Sources */,
 				F19B0DC82A2F8132003FFDCD /* GenerateBillViewController+TableView.swift in Sources */,
 				F193F4382A23B6290044DABE /* MyNotification.swift in Sources */,
-				F11148BC2A333054004CA5C1 /* AddNewUser+TableView.swift in Sources */,
+				F11148BC2A333054004CA5C1 /* UserViewController+TableView.swift in Sources */,
 				F193F4422A23BF660044DABE /* Firebase+Visits.swift in Sources */,
 				F19B0DC62A2F7A1C003FFDCD /* GenerateBillViewController.swift in Sources */,
 				F193F42E2A227CAC0044DABE /* Visit.swift in Sources */,
 				F1D4FC452A266513000D8981 /* AddNewVisitViewController.swift in Sources */,
 				F1F6DFCC2A44AC6100FC8794 /* Firebase+Tables.swift in Sources */,
 				F13957032A42E57800503605 /* ReservationViewController+TableView.swift in Sources */,
+				F1D65AB22A4AF179008191CF /* LocalData+Users.swift in Sources */,
 				F13957062A42EADC00503605 /* ReservationViewController+TextView.swift in Sources */,
-				F1D4FC322A251117000D8981 /* AddNewUserViewController.swift in Sources */,
+				F1D4FC322A251117000D8981 /* UserViewController.swift in Sources */,
+				F1D65AAE2A4AF14A008191CF /* LocalData+Tables.swift in Sources */,
+				F1D65AB42A4AFEA8008191CF /* Int+Extensions.swift in Sources */,
 				F193F4462A23C6F80044DABE /* SplashViewController.swift in Sources */,
 				F1F1FEE32A3C9BF2006CF26B /* Firebase+Menu.swift in Sources */,
+				F1D65AB02A4AF165008191CF /* LocalData+Bill.swift in Sources */,
 				F1F6DFCE2A44AC7D00FC8794 /* Table.swift in Sources */,
 				F11AFBCB2A30BF61005B3858 /* LoginViewController.swift in Sources */,
+				F1D65AA82A4AEEC8008191CF /* Date+Extensions.swift in Sources */,
 				F1D4FC4A2A266794000D8981 /* AddUserToVisitViewController.swift in Sources */,
 				F13957012A42C19F00503605 /* UIDatePicker+Extensions.swift in Sources */,
 				F1D4FC4C2A2668ED000D8981 /* AddUserToVisitViewController+TableView.swift in Sources */,

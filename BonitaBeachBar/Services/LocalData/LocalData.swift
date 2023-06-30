@@ -9,7 +9,6 @@ import Foundation
 
 class LocalData {
     static let shared: LocalData = LocalData()
-    
     var allGuests: [User]?
     var allPromo: [User]?
     var allMaster: [User]?
@@ -18,142 +17,56 @@ class LocalData {
     var menu: [MenuItem]?
     var reservations: [Reservation]?
     var tables: [Table]?
+    var promoMin: Double = 20000
+    var realtimeDB = RealtimeDB()
     
-    func removeUser(user: User?) {
-        guard let user = user else { return }
-        if user.type == .promo {
-            allPromo?.removeAll(where: { User in
-                User.id == user.id
-            })
-        }
-        else if user.type == .master {
-            allMaster?.removeAll(where: { User in
-                User.id == user.id
-            })
-        }
-        else if user.type == .guest {
-            allGuests?.removeAll(where: { User in
-                User.id == user.id
-            })
-        }
-    }
-    
-    func updateUser(user: User) {
-        switch user.type {
-        case .guest:
-            if let allGuests = allGuests {
-                for (index, guest) in allGuests.enumerated() {
-                    if guest.id == user.id {
-                        self.allGuests?.remove(at: index)
-                        self.allGuests?.insert(user, at: index)
-                    }
-                }
-            }
-        case .promo:
-            if let allPromo = allPromo {
-                for (index, promo) in allPromo.enumerated() {
-                    if promo.id == user.id {
-                        self.allPromo?.remove(at: index)
-                        self.allPromo?.insert(user, at: index)
-                    }
-                }
-            }
-        case .master:
-            if let allMaster = allMaster {
-                for (index, master) in allMaster.enumerated() {
-                    if master.id == user.id {
-                        self.allMaster?.remove(at: index)
-                        self.allMaster?.insert(user, at: index)
-                    }
+    struct RealtimeDB {
+        var guestsVersion = 0 {
+            didSet {
+                FirebaseService().fetchAllGuestsFromFirebase { success in
+                    MyNotification.postNotification(name: .realtimeChangeReloadData)
                 }
             }
         }
-    }
-    
-    func addUser(user: User) {
-        switch user.type {
-        case .guest: LocalData.shared.allGuests?.insert(user, at: 0)
-        case .promo: LocalData.shared.allPromo?.append(user)
-        case .master: LocalData.shared.allMaster?.append(user)
-        }
-    }
-    
-    func getGuest(byId id: String) -> User? {
-        guard let allGuests = LocalData.shared.allGuests else { return nil }
-        for myGuest in allGuests where myGuest.id == id {
-            return myGuest
-        }
-        return nil
-    }
-    
-    func getPromo(byId id: String) -> User? {
-        guard let allPromo = LocalData.shared.allPromo else { return nil }
-        for myPromo in allPromo where myPromo.id == id {
-            return myPromo
-        }
-        return nil
-    }
-    
-    func getBill(byId id: String) -> Bill? {
-        guard let allBills = LocalData.shared.allBills else { return nil }
-        for myBill in allBills where myBill.id == id {
-            return myBill
-        }
-        return nil
-    }
-    
-    func getAvailableTables(forDate date: String?) -> [Table]? {
-        guard let tables = tables, let date = date else { return nil }
-        var availableTables: [Table] = []
-        for table in tables {
-            var booked: Bool = false
-            if let reservations = reservations {
-                for reservation in reservations {
-                    if let reservationTable = reservation.table,
-                       reservation.date == date,
-                       reservationTable == table.number {
-                        booked = true
-                    }
+        
+        var masterVersion = 0 {
+            didSet {
+                FirebaseService().fetchAllMastersFromFirebase { success in
+                    MyNotification.postNotification(name: .realtimeChangeReloadData)
                 }
             }
-            if !booked {
-                availableTables.append(table)
+        }
+
+        var promoVersion = 0 {
+            didSet {
+                FirebaseService().fetchAllPromosFromFirebase { success in
+                    MyNotification.postNotification(name: .realtimeChangeReloadData)
+                }
             }
         }
-        return availableTables
-    }
-    
-    func getReservation(forTable table: String, date: String) -> Reservation? {
-        guard let reservations = reservations else { return nil }
-        for reservation in reservations {
-            if let reservationTable = reservation.table,
-               reservationTable == table,
-               reservation.date == date {
-                return reservation
+        
+        var reservationsVersion = 0 {
+            didSet {
+                FirebaseService().fetchReservationsFromFirebase(completion: { reservations, error in
+                    if let error = error {
+                        print("[LocalData.RealtimeDB.reservationsVersion error \(error)]")
+                    } else {
+                        LocalData.shared.reservations = reservations
+                        MyNotification.postNotification(name: .realtimeChangeReservation)
+                    }
+                })
             }
         }
-        return nil
-    }
-    
-    func getVisit(forTable table: String, date: String) -> Visit? {
-        guard let visits = allVisits else { return nil }
-        for visit in visits {
-            if let visitTable = visit.table?.number,
-               visitTable == table,
-               visit.date == date {
-                return visit
+        var visitVersion = 0 {
+            didSet {
+                FirebaseService().fetchAllBillsAndVisits { success, error in
+                    MyNotification.postNotification(name: .realtimeChangeVisit)
+                }
             }
         }
-        return nil
-    }
-    
-    func removeReservation(reservation: Reservation) {
-        guard var reservations = reservations else { return }
-        for (index, oldReservation) in reservations.enumerated() {
-            if oldReservation.id == reservation.id {
-                reservations.remove(at: index)
-            }
-        }
-        LocalData.shared.reservations = reservations
+        
+        // No Need for standalone listeners
+        var menuVersion = 0
+        var billVersion = 0
     }
 }

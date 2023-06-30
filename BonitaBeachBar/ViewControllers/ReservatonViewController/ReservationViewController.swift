@@ -158,6 +158,7 @@ class ReservationViewController: UIViewController {
                 self.btnBookTable.isEnabled = true
                 self.loader.isHidden = true
             } else {
+                FirebaseService().realtimeReservationChange()
                 self.performSegue(withIdentifier: "unwindHome", sender: self)
             }
         }

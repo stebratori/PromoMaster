@@ -61,5 +61,4 @@ struct Reservation {
             self.promo = promo
         }
     }
-    
 }

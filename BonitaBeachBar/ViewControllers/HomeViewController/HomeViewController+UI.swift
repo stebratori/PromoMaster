@@ -60,8 +60,15 @@ extension HomeViewController {
     }
     
     func setupReservationsDayAndDate() {
+        guard
+            let currentReservationsDate = currentReservationsDate
+        else {
+            showNoReservations()
+            return
+        }
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat  = "EEEE"
+        lblDayResDayPicker.isHidden = false
         let dayOfTheWeek = dateFormatter.string(from: currentReservationsDate)
         lblDayResDayPicker.text = "- \(dayOfTheWeek) -"
         var dateString = currentReservationsDate.stringDate()
@@ -74,26 +81,6 @@ extension HomeViewController {
         lblDateResDayPicker.text = dateString
     }
     
-    
-    func checkPreviousAndNextDayReservations() {
-        var previousDayReservationsExist: Bool = false
-        var nextDayReservationsExist: Bool = false
-        if let reservations = LocalData.shared.reservations,
-           let previousDay = currentReservationsDate.previousDay()?.stringDate(),
-           let nextDay = currentReservationsDate.nextDay()?.stringDate() {
-            for reservation in reservations {
-                if reservation.date == previousDay {
-                    previousDayReservationsExist = true
-                }
-                if reservation.date == nextDay {
-                    nextDayReservationsExist = true
-                }
-            }
-        }
-        btnLeftResDayPicker.isEnabled = previousDayReservationsExist
-        btnRightResDayPicker.isEnabled = nextDayReservationsExist
-    }
-    
     func setPreviousBookingsNotificationIfNeeded() {
         var notificationCount: Int = 0
         guard let reservations = LocalData.shared.reservations else { return }
@@ -103,6 +90,67 @@ extension HomeViewController {
         if notificationCount > 0 {
             lblPreviousBookingsNotification.isHidden = false
             lblPreviousBookingsNotification.text = "\(notificationCount)"
+        } else {
+            lblPreviousBookingsNotification.isHidden = true
+        }
+    }
+    
+    func showPreviousDayReservations() {
+        guard let allReservationDates = allReservationDates else { return }
+        for (index, reservationDate) in allReservationDates.enumerated() {
+            if reservationDate.isEqual(toDate: currentReservationsDate), index - 1 >= 0 {
+                currentReservationsDate = allReservationDates[index - 1]
+                showReservationsForSelectedDate()
+                return
+            }
+        }
+    }
+    
+    func showNextDayReservations() {
+        guard let allReservationDates = allReservationDates else { return }
+        for (index, reservationDate) in allReservationDates.enumerated() {
+            if reservationDate.isEqual(toDate: currentReservationsDate), index + 1 < allReservationDates.count {
+                currentReservationsDate = allReservationDates[index + 1]
+                showReservationsForSelectedDate()
+                return
+            }
+        }
+    }
+    
+    func showReservationsForSelectedDate() {
+        if let reservations = LocalData.shared.getReservationsForDate(date: currentReservationsDate),
+           reservations.count > 0 {
+            bonitaDataSource = reservations
+            preFilteredDataSource = reservations
+            showAllReservationsInTableView()
+            enableOrDisableNextAndPreviousMonthButtons()
+        } else {
+            showNoReservations()
+        }
+    }
+    
+    private func showNoReservations() {
+        lblDayResDayPicker.isHidden = true
+        lblDateResDayPicker.text = "No Reservations"
+        btnLeftResDayPicker.isEnabled = false
+        btnRightResDayPicker.isEnabled = false
+    }
+    
+    private func enableOrDisableNextAndPreviousMonthButtons() {
+        guard let allReservationDates = allReservationDates else { return }
+        for (index, reservationDate) in allReservationDates.enumerated() {
+            if reservationDate.isEqual(toDate: currentReservationsDate) {
+                if index + 1 < allReservationDates.count {
+                    btnRightResDayPicker.isEnabled = true
+                } else {
+                    btnRightResDayPicker.isEnabled = false
+                }
+                if index - 1 >= 0 {
+                    btnLeftResDayPicker.isEnabled = true
+                } else {
+                    btnLeftResDayPicker.isEnabled = false
+                }
+            }
         }
     }
 }

@@ -38,6 +38,7 @@ class AddNewVisitViewController: UIViewController {
     var tableViewSuggestionsType: TableViewSuggestionsType?
     var tableViewSuggestionsDataSource: [Any] = []
     var tableViewSuggestionsDataSourceFiltered: [Any] = []
+    let firebase: FirebaseService = FirebaseService()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -177,13 +178,14 @@ class AddNewVisitViewController: UIViewController {
                       promo: promo,
                       bill: bill,
                       table: table ?? Table(number: "-"))
-        FirebaseService().addVisit(visit: visit) { success in
+        firebase.addVisit(visit: visit) { success in
             if success {
+                self.firebase.realtimeVisitIncrease()
                 LocalData.shared.allBills?.append(bill)
                 LocalData.shared.allVisits?.append(visit)
                 if let reservation = self.reservation {
-                    FirebaseService().deleteReservation(reservation: reservation) { success in
-                        LocalData.shared.removeReservation(reservation: reservation)
+                    self.firebase.deleteReservation(reservation: reservation) { success in
+                        self.firebase.realtimeReservationChange()
                         self.performSegue(withIdentifier: "unwindHomeFromVisit", sender: self)
                     }
                 } else {

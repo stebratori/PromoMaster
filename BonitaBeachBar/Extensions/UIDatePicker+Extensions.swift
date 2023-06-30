@@ -15,26 +15,4 @@ extension UIDatePicker {
     }
 }
 
-extension Date {
-    func stringDate() -> String {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd.MM.yyyy"
-        return dateFormatter.string(from: self)
-    }
-    
-    func previousDay() -> Date? {
-        var dayComponent = DateComponents()
-        dayComponent.day = -1
-        let theCalendar = Calendar.current
-        let nextDate = theCalendar.date(byAdding: dayComponent, to: self)
-        return nextDate
-    }
-    
-    func nextDay() -> Date? {
-        var dayComponent = DateComponents()
-        dayComponent.day = 1
-        let theCalendar = Calendar.current
-        let nextDate = theCalendar.date(byAdding: dayComponent, to: self)
-        return nextDate
-    }
-}
+

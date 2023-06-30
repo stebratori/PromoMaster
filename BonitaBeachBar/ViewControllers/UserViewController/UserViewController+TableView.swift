@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension AddNewUserViewController: UITableViewDelegate, UITableViewDataSource {
+extension UserViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         tableViewDataSource.count
     }
@@ -16,8 +16,7 @@ extension AddNewUserViewController: UITableViewDelegate, UITableViewDataSource {
         switch userStatisticsType {
         case .bookings:
             let cell = tableView.dequeueReusableCell(withIdentifier: "VisitsTableViewCell", for: indexPath) as! VisitsTableViewCell
-            if let visits = user?.visits {
-                let visit = visits[indexPath.row]
+            if let visit = tableViewDataSource[indexPath.row] as? Visit {
                 cell.setupView(visit: visit)
             }
             return cell
@@ -64,8 +63,12 @@ extension AddNewUserViewController: UITableViewDelegate, UITableViewDataSource {
     func reloadTableViewData(type: UserStatisticsType) {
         userStatisticsType = type
         switch type {
-        case .bookings: tableViewDataSource = userVisits()
-        case .favorites: tableViewDataSource = userFavorites()
+        case .bookings:
+            tableViewDataSource = userVisits()
+            viewFavoritesLegend.isHidden = true
+        case .favorites:
+            tableViewDataSource = userFavorites()
+            viewFavoritesLegend.isHidden = false
         }
         tableView.reloadData()
     }

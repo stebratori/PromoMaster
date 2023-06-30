@@ -44,8 +44,9 @@ extension HomeViewController {
     
     func showUser(indexPath: IndexPath) {
         if let user = bonitaDataSource[indexPath.row] as? User,
-            let vc = storyBoard.instantiateViewController(withIdentifier: "AddNewUserViewController") as? AddNewUserViewController {
+            let vc = storyBoard.instantiateViewController(withIdentifier: "AddNewUserViewController") as? UserViewController {
             vc.user = user
+            vc.type = user.type
             vc.readOnly = true
             vc.unwindDestinationVC = self
             searchBar.resignFirstResponder()
@@ -54,7 +55,7 @@ extension HomeViewController {
     }
     
     private func pushAddUserVC() {
-        if let vc = storyBoard.instantiateViewController(withIdentifier: "AddNewUserViewController") as? AddNewUserViewController {
+        if let vc = storyBoard.instantiateViewController(withIdentifier: "AddNewUserViewController") as? UserViewController {
             vc.type = .guest
             vc.unwindDestinationVC = self
             searchBar.resignFirstResponder()
@@ -70,7 +71,7 @@ extension HomeViewController {
     }
     
     private func pushAddMasterVC() {
-        if let vc = storyBoard.instantiateViewController(withIdentifier: "AddNewUserViewController") as? AddNewUserViewController {
+        if let vc = storyBoard.instantiateViewController(withIdentifier: "AddNewUserViewController") as? UserViewController {
             vc.type = .master
             vc.unwindDestinationVC = self
             searchBar.resignFirstResponder()

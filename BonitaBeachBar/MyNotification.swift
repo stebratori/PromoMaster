@@ -11,10 +11,21 @@ class MyNotification {
     static func postNotification(name: MyNotificationType) {
         NotificationCenter.default.post(Notification(name: Notification.Name(name.rawValue)))
     }
+    
+
 }
 
 enum MyNotificationType: String {
     // -*- -*- FIREBASE -*- -*- //
+    
+    // REALTIME
+    case realtimeChangeVisit
+    case realtimeChangeGuest
+    case realtimeChangeMaster
+    case realtimeChangePromo
+    case realtimeChangeReservation
+    case realtimeChangeUser
+    case realtimeChangeReloadData
     
     // Firebase data fetching
     case firebaseAllUsersFetched
