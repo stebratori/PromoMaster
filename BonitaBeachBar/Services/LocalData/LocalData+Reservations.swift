@@ -29,11 +29,11 @@ extension LocalData {
         return dates.sorted(by: { $0 < $1 })
     }
     
-    func getReservationsForDate(date: Date?) -> [Reservation] {
+    func getReservationsForDate(date: Date?) -> [Reservation]? {
         guard
             let reservations = LocalData.shared.reservations,
             let date = date
-        else { return [] }
+        else { return nil }
         var reservationsForDate: [Reservation] = []
         for reservation in reservations where date.stringDate() == reservation.date {
             reservationsForDate.append(reservation)

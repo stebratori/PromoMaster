@@ -31,6 +31,8 @@ class ReservationsTableViewCell: UITableViewCell {
         }
         if let comment = reservation.comment, comment.count > 0 {
             imgComment.isHidden = false
+        } else {
+            imgComment.isHidden = true
         }
     }
 }

@@ -59,7 +59,8 @@ class HomeViewController: UIViewController {
     
     func getReservationDatesAndShowReservations() {
         allReservationDates = LocalData.shared.getAllReservationDates()
-        if LocalData.shared.getReservationsForDate(date: Date()).count > 0 {
+        if let weHaveReservationsForToday = LocalData.shared.getReservationsForDate(date: Date()),
+           weHaveReservationsForToday.count > 0 {
             currentReservationsDate = Date()
         } else {
             currentReservationsDate = allReservationDates?.last
