@@ -43,8 +43,8 @@ extension HomeViewController {
     
     @objc
     private func notificationReservationsChange() {
-        getReservationDatesAndShowReservations()
-        setPreviousBookingsNotificationIfNeeded()
+        refreshDataAndShowReservations()
+        showTodaysReservations = false
     }
     
     @objc

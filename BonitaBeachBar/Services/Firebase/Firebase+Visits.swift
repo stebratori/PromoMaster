@@ -106,6 +106,9 @@ extension FirebaseService {
         if let table = visit.table?.number {
             data["table"] = table
         }
+        if let comment = visit.comment {
+            data["comment"] = comment
+        }
         firestore
             .collection(collectionName)
             .document(visit.id)

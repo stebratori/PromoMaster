@@ -56,17 +56,39 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x6l-nA-Sdc">
                                                         <rect key="frame" x="146" y="0.0" width="50" height="32"/>
                                                         <subviews>
-                                                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgCommentRight.png" translatesAutoresizingMaskIntoConstraints="NO" id="QLg-9y-rSc">
-                                                                <rect key="frame" x="8" y="8" width="34" height="16"/>
-                                                            </imageView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ODg-rt-yl7">
+                                                                <rect key="frame" x="0.0" y="0.0" width="50" height="32"/>
+                                                                <subviews>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgGetMoney.png" translatesAutoresizingMaskIntoConstraints="NO" id="fl7-OE-zm3">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="32"/>
+                                                                    </imageView>
+                                                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bcq-n6-All">
+                                                                        <rect key="frame" x="0.0" y="32" width="50" height="0.0"/>
+                                                                        <subviews>
+                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgCommentRight.png" translatesAutoresizingMaskIntoConstraints="NO" id="QLg-9y-rSc">
+                                                                                <rect key="frame" x="0.0" y="-8" width="50" height="16"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" constant="50" id="Gfq-Jj-VCu"/>
+                                                                                    <constraint firstAttribute="height" constant="16" id="kpI-hf-p1G"/>
+                                                                                </constraints>
+                                                                            </imageView>
+                                                                        </subviews>
+                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <constraints>
+                                                                            <constraint firstItem="QLg-9y-rSc" firstAttribute="centerY" secondItem="Bcq-n6-All" secondAttribute="centerY" id="eRm-zk-gtd"/>
+                                                                            <constraint firstItem="QLg-9y-rSc" firstAttribute="centerX" secondItem="Bcq-n6-All" secondAttribute="centerX" id="lVn-tp-6po"/>
+                                                                        </constraints>
+                                                                    </view>
+                                                                </subviews>
+                                                            </stackView>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="50" id="6Ay-xC-YzR"/>
-                                                            <constraint firstItem="QLg-9y-rSc" firstAttribute="top" secondItem="x6l-nA-Sdc" secondAttribute="top" constant="8" id="BCc-l1-EEM"/>
-                                                            <constraint firstAttribute="bottom" secondItem="QLg-9y-rSc" secondAttribute="bottom" constant="8" id="Svs-Lb-NiZ"/>
-                                                            <constraint firstItem="QLg-9y-rSc" firstAttribute="leading" secondItem="x6l-nA-Sdc" secondAttribute="leading" constant="8" id="WP6-EW-7Zh"/>
-                                                            <constraint firstAttribute="trailing" secondItem="QLg-9y-rSc" secondAttribute="trailing" constant="8" id="WUP-nm-tGe"/>
+                                                            <constraint firstItem="ODg-rt-yl7" firstAttribute="leading" secondItem="x6l-nA-Sdc" secondAttribute="leading" id="Jf2-Qy-F7V"/>
+                                                            <constraint firstItem="ODg-rt-yl7" firstAttribute="top" secondItem="x6l-nA-Sdc" secondAttribute="top" id="TYP-YJ-VMs"/>
+                                                            <constraint firstAttribute="bottom" secondItem="ODg-rt-yl7" secondAttribute="bottom" id="Tu5-sR-Lgh"/>
+                                                            <constraint firstAttribute="trailing" secondItem="ODg-rt-yl7" secondAttribute="trailing" id="njG-Ue-uKg"/>
                                                         </constraints>
                                                     </view>
                                                 </subviews>
@@ -146,7 +168,8 @@
             <connections>
                 <outlet property="background" destination="no9-KC-qFw" id="0E5-cf-ik3"/>
                 <outlet property="guestName" destination="UIV-C5-Uu8" id="EDl-by-D0Z"/>
-                <outlet property="imgComment" destination="QLg-9y-rSc" id="BEo-Fu-Rr0"/>
+                <outlet property="imgComment" destination="Bcq-n6-All" id="WrY-Od-GKJ"/>
+                <outlet property="imgGetMoney" destination="fl7-OE-zm3" id="Jus-Pm-MUc"/>
                 <outlet property="lblPromoName" destination="0XG-V3-Mse" id="r2J-6V-Xel"/>
                 <outlet property="lblTableNumber" destination="Nr8-zY-sa0" id="PAa-km-w2r"/>
                 <outlet property="viewBookedBy" destination="kg7-tH-mkc" id="ZjU-iy-7zE"/>
@@ -156,5 +179,6 @@
     </objects>
     <resources>
         <image name="imgCommentRight.png" width="600" height="384"/>
+        <image name="imgGetMoney.png" width="128" height="128"/>
     </resources>
 </document>

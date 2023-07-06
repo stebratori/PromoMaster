@@ -46,4 +46,26 @@ struct Visit {
             self.comment = comment
         }
     }
+    
+    func favorites() -> [StavkaRacuna] {
+        var favorites: [StavkaRacuna] = []
+        if let billItems = bill?.billItems {
+            for billItem in billItems {
+                var itemAlreadyInFavorites: Bool = false
+                for (index, favorite) in favorites.enumerated() {
+                    if favorite.name == billItem.name {
+                        var editedFavorite = favorite
+                        editedFavorite.count += billItem.count
+                        favorites[index] = editedFavorite
+                        itemAlreadyInFavorites = true
+                        break
+                    }
+                }
+                if !itemAlreadyInFavorites {
+                    favorites.append(billItem)
+                }
+            }
+        }
+        return favorites.sorted(by: { $0.price * Double($0.count) > $1.price * Double($1.count) })
+    }
 }

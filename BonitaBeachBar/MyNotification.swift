@@ -45,6 +45,7 @@ enum MyNotificationType: String {
     case firebaseUserAdded
     
     // Firebase Error
+    case firebaseError
     case firebaseFetchingError
     case firebaseAddUserError
     case firebaseAddVisitError

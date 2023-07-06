@@ -455,47 +455,78 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "905DD51D-EF9C-49F3-8FFC-1060DB5A206E"
+            uuid = "5D76818F-1E4F-4E95-990D-DF5C74AEC7D9"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BonitaBeachBar/ViewControllers/HomeViewController/HomeViewController+Search.swift"
+            filePath = "BonitaBeachBar/ViewControllers/AddUserToVisit/AddUserToVisitViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
-            landmarkName = "showSearchResults(searchText:)"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "prepare(for:sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "082D2338-B833-4271-9399-A69AF9285DF1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BonitaBeachBar/ViewControllers/AddUserToVisit/AddUserToVisitViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
+            landmarkName = "prepare(for:sender:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "905DD51D-EF9C-49F3-8FFC-1060DB5A206E - 7daf419096686815"
+                  uuid = "082D2338-B833-4271-9399-A69AF9285DF1 - 4d8186826067e078"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "BonitaBeachBar.HomeViewController.showSearchResults(searchText: Swift.String) -&gt; ()"
+                  symbolName = "BonitaBeachBar.AddUserToVisitViewController.prepare(for: __C.UIStoryboardSegue, sender: Swift.Optional&lt;Any&gt;) -&gt; ()"
                   moduleName = "BonitaBeachBar"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/stebra/Dev/BonitaBeachBar/BonitaBeachBar/ViewControllers/HomeViewController/HomeViewController+Search.swift"
+                  urlString = "file:///Users/stebra/Dev/BonitaBeachBar/BonitaBeachBar/ViewControllers/AddUserToVisit/AddUserToVisitViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "66"
-                  endingLineNumber = "66"
-                  offsetFromSymbolStart = "4828">
+                  startingLineNumber = "96"
+                  endingLineNumber = "96"
+                  offsetFromSymbolStart = "736">
                </Location>
                <Location
-                  uuid = "905DD51D-EF9C-49F3-8FFC-1060DB5A206E - 7daf419096686815"
+                  uuid = "082D2338-B833-4271-9399-A69AF9285DF1 - 4d8186826067e078"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "BonitaBeachBar.HomeViewController.showSearchResults(searchText: Swift.String) -&gt; ()"
+                  symbolName = "BonitaBeachBar.AddUserToVisitViewController.prepare(for: __C.UIStoryboardSegue, sender: Swift.Optional&lt;Any&gt;) -&gt; ()"
                   moduleName = "BonitaBeachBar"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/stebra/Dev/BonitaBeachBar/BonitaBeachBar/ViewControllers/HomeViewController/HomeViewController+Search.swift"
+                  urlString = "file:///Users/stebra/Dev/BonitaBeachBar/BonitaBeachBar/ViewControllers/AddUserToVisit/AddUserToVisitViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "66"
-                  endingLineNumber = "66"
-                  offsetFromSymbolStart = "4820">
+                  startingLineNumber = "96"
+                  endingLineNumber = "96"
+                  offsetFromSymbolStart = "576">
+               </Location>
+               <Location
+                  uuid = "082D2338-B833-4271-9399-A69AF9285DF1 - 4d8186826067e078"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BonitaBeachBar.AddUserToVisitViewController.prepare(for: __C.UIStoryboardSegue, sender: Swift.Optional&lt;Any&gt;) -&gt; ()"
+                  moduleName = "BonitaBeachBar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/stebra/Dev/BonitaBeachBar/BonitaBeachBar/ViewControllers/AddUserToVisit/AddUserToVisitViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "96"
+                  endingLineNumber = "96"
+                  offsetFromSymbolStart = "712">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -503,62 +534,47 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D311A2EF-074E-4ABB-86BB-0542C7DB8335"
+            uuid = "489E02CC-3E62-47B0-8E12-8ED2A50DDB56"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BonitaBeachBar/ViewControllers/UserViewController/UserViewController+UI.swift"
+            filePath = "BonitaBeachBar/ViewControllers/AddNewVisitViewController/AddNewVisitViewController+TableView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "195"
-            endingLineNumber = "195"
-            landmarkName = "showAllVisitsAboveMinimumForSelectedMonth()"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "tableView(_:didSelectRowAt:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "D311A2EF-074E-4ABB-86BB-0542C7DB8335 - d9572a42168c5af8"
+                  uuid = "489E02CC-3E62-47B0-8E12-8ED2A50DDB56 - 96ac309eee2abe2c"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "BonitaBeachBar.UserViewController.showAllVisitsAboveMinimumForSelectedMonth() -&gt; ()"
+                  symbolName = "BonitaBeachBar.AddNewVisitViewController.tableView(_: __C.UITableView, didSelectRowAt: Foundation.IndexPath) -&gt; ()"
                   moduleName = "BonitaBeachBar"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/stebra/Dev/BonitaBeachBar/BonitaBeachBar/ViewControllers/UserViewController/UserViewController+UI.swift"
+                  urlString = "file:///Users/stebra/Dev/BonitaBeachBar/BonitaBeachBar/ViewControllers/AddNewVisitViewController/AddNewVisitViewController+TableView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "198"
-                  endingLineNumber = "198"
-                  offsetFromSymbolStart = "360">
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "356">
                </Location>
                <Location
-                  uuid = "D311A2EF-074E-4ABB-86BB-0542C7DB8335 - d9572a42168c5ad9"
+                  uuid = "489E02CC-3E62-47B0-8E12-8ED2A50DDB56 - 96ac309eee2abe2c"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "BonitaBeachBar.UserViewController.showAllVisitsAboveMinimumForSelectedMonth() -&gt; ()"
+                  symbolName = "BonitaBeachBar.AddNewVisitViewController.tableView(_: __C.UITableView, didSelectRowAt: Foundation.IndexPath) -&gt; ()"
                   moduleName = "BonitaBeachBar"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/stebra/Dev/BonitaBeachBar/BonitaBeachBar/ViewControllers/UserViewController/UserViewController+UI.swift"
+                  urlString = "file:///Users/stebra/Dev/BonitaBeachBar/BonitaBeachBar/ViewControllers/AddNewVisitViewController/AddNewVisitViewController+TableView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "197"
-                  endingLineNumber = "197"
-                  offsetFromSymbolStart = "2176">
-               </Location>
-               <Location
-                  uuid = "D311A2EF-074E-4ABB-86BB-0542C7DB8335 - d9572a42168c5a07"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "BonitaBeachBar.UserViewController.showAllVisitsAboveMinimumForSelectedMonth() -&gt; ()"
-                  moduleName = "BonitaBeachBar"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/stebra/Dev/BonitaBeachBar/BonitaBeachBar/ViewControllers/UserViewController/UserViewController+UI.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "195"
-                  endingLineNumber = "195"
-                  offsetFromSymbolStart = "320">
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "792">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -566,62 +582,123 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "CB643367-2AA6-4F32-8665-7FAF46D6265D"
+            uuid = "0E7204A6-25CA-4FA0-B815-7D119C4D27C8"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BonitaBeachBar/ViewControllers/UserViewController/UserViewController+UI.swift"
+            filePath = "BonitaBeachBar/ViewControllers/AddUserToVisit/AddUserToVisitViewController+TableView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "199"
-            endingLineNumber = "199"
-            landmarkName = "showAllVisitsAboveMinimumForSelectedMonth()"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "tableView(_:didSelectRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B5444B7A-2932-4412-83BF-C6D10DED3269"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BonitaBeachBar/ViewControllers/AddNewVisitViewController/AddNewVisitViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "148"
+            endingLineNumber = "148"
+            landmarkName = "setupViewForReservation(reservation:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "CB643367-2AA6-4F32-8665-7FAF46D6265D - d9572a42168c5b7c"
+                  uuid = "B5444B7A-2932-4412-83BF-C6D10DED3269 - 1342c4d0d0379c24"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "BonitaBeachBar.UserViewController.showAllVisitsAboveMinimumForSelectedMonth() -&gt; ()"
+                  symbolName = "BonitaBeachBar.AddNewVisitViewController.setupViewForReservation(reservation: BonitaBeachBar.Reservation) -&gt; ()"
                   moduleName = "BonitaBeachBar"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/stebra/Dev/BonitaBeachBar/BonitaBeachBar/ViewControllers/UserViewController/UserViewController+UI.swift"
+                  urlString = "file:///Users/stebra/Dev/BonitaBeachBar/BonitaBeachBar/ViewControllers/AddNewVisitViewController/AddNewVisitViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "202"
-                  endingLineNumber = "202"
-                  offsetFromSymbolStart = "1632">
+                  startingLineNumber = "126"
+                  endingLineNumber = "126"
+                  offsetFromSymbolStart = "1968">
                </Location>
                <Location
-                  uuid = "CB643367-2AA6-4F32-8665-7FAF46D6265D - d9572a42168c5b5d"
+                  uuid = "B5444B7A-2932-4412-83BF-C6D10DED3269 - 1342c4d0d0379c24"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "BonitaBeachBar.UserViewController.showAllVisitsAboveMinimumForSelectedMonth() -&gt; ()"
+                  symbolName = "BonitaBeachBar.AddNewVisitViewController.setupViewForReservation(reservation: BonitaBeachBar.Reservation) -&gt; ()"
                   moduleName = "BonitaBeachBar"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/stebra/Dev/BonitaBeachBar/BonitaBeachBar/ViewControllers/UserViewController/UserViewController+UI.swift"
+                  urlString = "file:///Users/stebra/Dev/BonitaBeachBar/BonitaBeachBar/ViewControllers/AddNewVisitViewController/AddNewVisitViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "201"
-                  endingLineNumber = "201"
-                  offsetFromSymbolStart = "392">
+                  startingLineNumber = "126"
+                  endingLineNumber = "126"
+                  offsetFromSymbolStart = "2024">
                </Location>
                <Location
-                  uuid = "CB643367-2AA6-4F32-8665-7FAF46D6265D - d9572a42168c5a9b"
+                  uuid = "B5444B7A-2932-4412-83BF-C6D10DED3269 - 1342c4d0d0379c81"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "BonitaBeachBar.UserViewController.showAllVisitsAboveMinimumForSelectedMonth() -&gt; ()"
+                  symbolName = "BonitaBeachBar.AddNewVisitViewController.setupViewForReservation(reservation: BonitaBeachBar.Reservation) -&gt; ()"
                   moduleName = "BonitaBeachBar"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/stebra/Dev/BonitaBeachBar/BonitaBeachBar/ViewControllers/UserViewController/UserViewController+UI.swift"
+                  urlString = "file:///Users/stebra/Dev/BonitaBeachBar/BonitaBeachBar/ViewControllers/AddNewVisitViewController/AddNewVisitViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "199"
-                  endingLineNumber = "199"
-                  offsetFromSymbolStart = "944">
+                  startingLineNumber = "131"
+                  endingLineNumber = "131"
+                  offsetFromSymbolStart = "2156">
+               </Location>
+               <Location
+                  uuid = "B5444B7A-2932-4412-83BF-C6D10DED3269 - 1342c4d0d0379c81"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BonitaBeachBar.AddNewVisitViewController.setupViewForReservation(reservation: BonitaBeachBar.Reservation) -&gt; ()"
+                  moduleName = "BonitaBeachBar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/stebra/Dev/BonitaBeachBar/BonitaBeachBar/ViewControllers/AddNewVisitViewController/AddNewVisitViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "131"
+                  endingLineNumber = "131"
+                  offsetFromSymbolStart = "2212">
+               </Location>
+               <Location
+                  uuid = "B5444B7A-2932-4412-83BF-C6D10DED3269 - 1342c4d0d0379f4e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BonitaBeachBar.AddNewVisitViewController.setupViewForReservation(reservation: BonitaBeachBar.Reservation) -&gt; ()"
+                  moduleName = "BonitaBeachBar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/stebra/Dev/BonitaBeachBar/BonitaBeachBar/ViewControllers/AddNewVisitViewController/AddNewVisitViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "148"
+                  endingLineNumber = "148"
+                  offsetFromSymbolStart = "2164">
+               </Location>
+               <Location
+                  uuid = "B5444B7A-2932-4412-83BF-C6D10DED3269 - 1342c4d0d0379f4e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BonitaBeachBar.AddNewVisitViewController.setupViewForReservation(reservation: BonitaBeachBar.Reservation) -&gt; ()"
+                  moduleName = "BonitaBeachBar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/stebra/Dev/BonitaBeachBar/BonitaBeachBar/ViewControllers/AddNewVisitViewController/AddNewVisitViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "148"
+                  endingLineNumber = "148"
+                  offsetFromSymbolStart = "2220">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -629,47 +706,62 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "73C5F638-3D99-44CD-9ADA-AF735FE733E2"
+            uuid = "8644554F-920A-4538-A903-8A73797912D9"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BonitaBeachBar/Services/Firebase/Firebase+RealtimeDatabase.swift"
+            filePath = "BonitaBeachBar/ViewControllers/AddNewVisitViewController/AddNewVisitViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
-            landmarkName = "realtimeReservationChange()"
+            startingLineNumber = "138"
+            endingLineNumber = "138"
+            landmarkName = "setupViewForReservation(reservation:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "73C5F638-3D99-44CD-9ADA-AF735FE733E2 - 21a95f63209751b9"
+                  uuid = "8644554F-920A-4538-A903-8A73797912D9 - 1342c4d0d037a34f"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "BonitaBeachBar.FirebaseService.realtimeReservationIncrease() -&gt; ()"
+                  symbolName = "BonitaBeachBar.AddNewVisitViewController.setupViewForReservation(reservation: BonitaBeachBar.Reservation) -&gt; ()"
                   moduleName = "BonitaBeachBar"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/stebra/Dev/BonitaBeachBar/BonitaBeachBar/Services/Firebase/Firebase+RealtimeDatabase.swift"
+                  urlString = "file:///Users/stebra/Dev/BonitaBeachBar/BonitaBeachBar/ViewControllers/AddNewVisitViewController/AddNewVisitViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "67"
-                  endingLineNumber = "67"
-                  offsetFromSymbolStart = "68">
+                  startingLineNumber = "117"
+                  endingLineNumber = "117"
+                  offsetFromSymbolStart = "172">
                </Location>
                <Location
-                  uuid = "73C5F638-3D99-44CD-9ADA-AF735FE733E2 - 61736723d998b9da"
+                  uuid = "8644554F-920A-4538-A903-8A73797912D9 - 1342c4d0d037a3cb"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "BonitaBeachBar.FirebaseService.realtimeReservationChange() -&gt; ()"
+                  symbolName = "BonitaBeachBar.AddNewVisitViewController.setupViewForReservation(reservation: BonitaBeachBar.Reservation) -&gt; ()"
                   moduleName = "BonitaBeachBar"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/stebra/Dev/BonitaBeachBar/BonitaBeachBar/Services/Firebase/Firebase+RealtimeDatabase.swift"
+                  urlString = "file:///Users/stebra/Dev/BonitaBeachBar/BonitaBeachBar/ViewControllers/AddNewVisitViewController/AddNewVisitViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "67"
-                  endingLineNumber = "67"
-                  offsetFromSymbolStart = "68">
+                  startingLineNumber = "121"
+                  endingLineNumber = "121"
+                  offsetFromSymbolStart = "172">
+               </Location>
+               <Location
+                  uuid = "8644554F-920A-4538-A903-8A73797912D9 - 1342c4d0d0379db8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BonitaBeachBar.AddNewVisitViewController.setupViewForReservation(reservation: BonitaBeachBar.Reservation) -&gt; ()"
+                  moduleName = "BonitaBeachBar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/stebra/Dev/BonitaBeachBar/BonitaBeachBar/ViewControllers/AddNewVisitViewController/AddNewVisitViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "138"
+                  endingLineNumber = "138"
+                  offsetFromSymbolStart = "180">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -677,78 +769,62 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "7AC68F0C-62AE-470E-A223-93251C060331"
+            uuid = "CBD9A668-992F-40A8-A129-379D015CB500"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BonitaBeachBar/Services/Firebase/Firebase+RealtimeDatabase.swift"
+            filePath = "BonitaBeachBar/ViewControllers/AddNewVisitViewController/AddNewVisitViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
-            landmarkName = "realtimeVisitIncrease()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "B46A4E0D-856A-4F65-808E-8869382424CC"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BonitaBeachBar/ViewControllers/UserViewController/UserViewController+UI.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "204"
-            endingLineNumber = "204"
-            landmarkName = "showAllVisitsAboveMinimumForSelectedMonth()"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "setupTextViewTapRecognisers()"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "B46A4E0D-856A-4F65-808E-8869382424CC - d9572a42168c5b93"
+                  uuid = "CBD9A668-992F-40A8-A129-379D015CB500 - 4f0cb6322803890c"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "BonitaBeachBar.UserViewController.showAllVisitsAboveMinimumForSelectedMonth() -&gt; ()"
+                  symbolName = "BonitaBeachBar.AddNewVisitViewController.setupTextViewTapRecognisers() -&gt; ()"
                   moduleName = "BonitaBeachBar"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/stebra/Dev/BonitaBeachBar/BonitaBeachBar/ViewControllers/UserViewController/UserViewController+UI.swift"
+                  urlString = "file:///Users/stebra/Dev/BonitaBeachBar/BonitaBeachBar/ViewControllers/AddNewVisitViewController/AddNewVisitViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "207"
-                  endingLineNumber = "207"
-                  offsetFromSymbolStart = "2152">
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
+                  offsetFromSymbolStart = "80">
                </Location>
                <Location
-                  uuid = "B46A4E0D-856A-4F65-808E-8869382424CC - d9572a42168c5bf0"
+                  uuid = "CBD9A668-992F-40A8-A129-379D015CB500 - 4f0cb6322803892d"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "BonitaBeachBar.UserViewController.showAllVisitsAboveMinimumForSelectedMonth() -&gt; ()"
+                  symbolName = "BonitaBeachBar.AddNewVisitViewController.setupTextViewTapRecognisers() -&gt; ()"
                   moduleName = "BonitaBeachBar"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/stebra/Dev/BonitaBeachBar/BonitaBeachBar/ViewControllers/UserViewController/UserViewController+UI.swift"
+                  urlString = "file:///Users/stebra/Dev/BonitaBeachBar/BonitaBeachBar/ViewControllers/AddNewVisitViewController/AddNewVisitViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "206"
-                  endingLineNumber = "206"
-                  offsetFromSymbolStart = "1872">
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "80">
                </Location>
                <Location
-                  uuid = "B46A4E0D-856A-4F65-808E-8869382424CC - d9572a42168c5b3e"
+                  uuid = "CBD9A668-992F-40A8-A129-379D015CB500 - 4f0cb632280388ff"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "BonitaBeachBar.UserViewController.showAllVisitsAboveMinimumForSelectedMonth() -&gt; ()"
+                  symbolName = "BonitaBeachBar.AddNewVisitViewController.setupTextViewTapRecognisers() -&gt; ()"
                   moduleName = "BonitaBeachBar"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/stebra/Dev/BonitaBeachBar/BonitaBeachBar/ViewControllers/UserViewController/UserViewController+UI.swift"
+                  urlString = "file:///Users/stebra/Dev/BonitaBeachBar/BonitaBeachBar/ViewControllers/AddNewVisitViewController/AddNewVisitViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "204"
-                  endingLineNumber = "204"
-                  offsetFromSymbolStart = "1960">
+                  startingLineNumber = "77"
+                  endingLineNumber = "77"
+                  offsetFromSymbolStart = "80">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -756,64 +832,33 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "1D6B735D-47FC-4C1B-94F7-6B75711EED6A"
+            uuid = "61C68BCA-AD5B-4E45-80B7-1C79F828B6B1"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BonitaBeachBar/ViewControllers/UserViewController/UserViewController+UI.swift"
+            filePath = "BonitaBeachBar/ViewControllers/HomeViewController/HomeViewController+UI.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "203"
-            endingLineNumber = "203"
-            landmarkName = "showAllVisitsAboveMinimumForSelectedMonth()"
+            startingLineNumber = "137"
+            endingLineNumber = "137"
+            landmarkName = "refreshDataAndShowReservations()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "1D6B735D-47FC-4C1B-94F7-6B75711EED6A - d9572a42168c5bf0"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "BonitaBeachBar.UserViewController.showAllVisitsAboveMinimumForSelectedMonth() -&gt; ()"
-                  moduleName = "BonitaBeachBar"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/stebra/Dev/BonitaBeachBar/BonitaBeachBar/ViewControllers/UserViewController/UserViewController+UI.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "206"
-                  endingLineNumber = "206"
-                  offsetFromSymbolStart = "2136">
-               </Location>
-               <Location
-                  uuid = "1D6B735D-47FC-4C1B-94F7-6B75711EED6A - d9572a42168c5bd1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "BonitaBeachBar.UserViewController.showAllVisitsAboveMinimumForSelectedMonth() -&gt; ()"
-                  moduleName = "BonitaBeachBar"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/stebra/Dev/BonitaBeachBar/BonitaBeachBar/ViewControllers/UserViewController/UserViewController+UI.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "205"
-                  endingLineNumber = "205"
-                  offsetFromSymbolStart = "1696">
-               </Location>
-               <Location
-                  uuid = "1D6B735D-47FC-4C1B-94F7-6B75711EED6A - d9572a42168c5b1f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "BonitaBeachBar.UserViewController.showAllVisitsAboveMinimumForSelectedMonth() -&gt; ()"
-                  moduleName = "BonitaBeachBar"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/stebra/Dev/BonitaBeachBar/BonitaBeachBar/ViewControllers/UserViewController/UserViewController+UI.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "203"
-                  endingLineNumber = "203"
-                  offsetFromSymbolStart = "1872">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5A191A42-7F0B-4947-A3FF-DD2074160817"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BonitaBeachBar/ViewControllers/HomeViewController/HomeViewController+UI.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "140"
+            endingLineNumber = "140"
+            landmarkName = "refreshDataAndShowReservations()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

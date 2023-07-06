@@ -53,6 +53,11 @@ extension FirebaseService {
                 LocalData.shared.realtimeDB.visitVersion = version
             }
         })
+        realtimeDatabase.child("promoMin").observe(.value, with: { snapshot in
+            if let version = snapshot.value as? Int {
+                LocalData.shared.realtimeDB.promoMin = version
+            }
+        })
     }
     
     func realtimeAddUser(user: User) {
@@ -89,5 +94,9 @@ extension FirebaseService {
 
     func realtimeBillIncrease() {
         realtimeDatabase.updateChildValues(["billVersion": ServerValue.increment(1)])
+    }
+    
+    func realtimePromoMinIncrease() {
+        realtimeDatabase.updateChildValues(["promoMin": ServerValue.increment(1)])
     }
 }

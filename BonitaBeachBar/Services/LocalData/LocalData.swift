@@ -17,7 +17,7 @@ class LocalData {
     var menu: [MenuItem]?
     var reservations: [Reservation]?
     var tables: [Table]?
-    var promoMin: Double = 20000
+    var promoMin: Double = 0
     var realtimeDB = RealtimeDB()
     
     struct RealtimeDB {
@@ -61,6 +61,15 @@ class LocalData {
             didSet {
                 FirebaseService().fetchAllBillsAndVisits { success, error in
                     MyNotification.postNotification(name: .realtimeChangeVisit)
+                }
+            }
+        }
+        var promoMin = 0 {
+            didSet {
+                FirebaseService().fetchPromoMin { promoMin, error in
+                    if let promoMin = promoMin {
+                        LocalData.shared.promoMin = promoMin
+                    }
                 }
             }
         }

@@ -54,4 +54,32 @@ extension Date {
         
         return dateDay == selfDay && dateMonth == selfMonth && dateYear == selfYear
     }
+    
+    func isEearlier(thanDate date: Date?) -> Bool {
+        guard let date = date else { return false }
+        let dateDay = Calendar.current.component(.day, from: date)
+        let dateMonth = Calendar.current.component(.month, from: date)
+        let dateYear = Calendar.current.component(.year, from: date)
+        
+        let selfDay = Calendar.current.component(.day, from: self)
+        let selfMonth = Calendar.current.component(.month, from: self)
+        let selfYear = Calendar.current.component(.year, from: self)
+        
+        let sameDay: Bool = dateDay == selfDay && dateMonth == selfMonth && dateYear == selfYear
+        return sameDay ? false : date > self
+    }
+    
+    func isLater(thanDate date: Date?) -> Bool {
+        guard let date = date else { return false }
+        let dateDay = Calendar.current.component(.day, from: date)
+        let dateMonth = Calendar.current.component(.month, from: date)
+        let dateYear = Calendar.current.component(.year, from: date)
+        
+        let selfDay = Calendar.current.component(.day, from: self)
+        let selfMonth = Calendar.current.component(.month, from: self)
+        let selfYear = Calendar.current.component(.year, from: self)
+        
+        let sameDay: Bool = dateDay == selfDay && dateMonth == selfMonth && dateYear == selfYear
+        return sameDay ? false : date < self
+    }
 }

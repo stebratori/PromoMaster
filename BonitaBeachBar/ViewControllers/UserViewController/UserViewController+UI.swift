@@ -9,6 +9,9 @@ import UIKit
 
 extension UserViewController {
     func setupView() {
+        if UserService.shared.currentUserIsPromo() {
+            segmentControl.isHidden = true
+        }
         navigationItem.backButtonTitle = "Back"
         btnAddUser.setTitle("Add \(type.getButtonName())", for: .normal)
         btnAddUser.cornerRadius()
@@ -40,9 +43,20 @@ extension UserViewController {
         segmentControlBackground.layer.cornerRadius = 8
         if type == .promo {
             btnFavorites.isHidden = true
+            btnBookings.isUserInteractionEnabled = false
+            viewPromoMonthly.isHidden = false
+            txtPromoMin.isHidden = true
         }
         if type == .master {
             viewBottom.isHidden = true
+            btnBookings.isUserInteractionEnabled = true
+            btnBookings.backgroundColor = .black
+            txtPromoMin.isHidden = false
+            txtPromoMin.text = "\(Int(LocalData.shared.promoMin))"
+        }
+        if type == .guest {
+            viewPromoMonthly.isHidden = true
+            txtPromoMin.isHidden = true
         }
     }
     
@@ -64,6 +78,9 @@ extension UserViewController {
         if let pin = user.pinFormatted(), user.type != .guest {
             lblPin.text = "Pin: \(pin)"
             lblPin.isHidden = false
+        }
+        if let promoMin = LocalData.shared.promoMin.formatDigits() {
+            lblPromoMin.text = "Promo min: \(promoMin)"
         }
         btnAddUser.isHidden = true
         viewViewUser.isHidden = false
@@ -105,16 +122,17 @@ extension UserViewController {
     
     private func setupViewForPromoViewer() {
         guard let user = user else { return }
+        lblName.text = user.name
         txtPromoMin.isHidden = true
         lblPromoMin.isHidden = false
         if UserService.shared.isCurrentUser(thisUser: user) {
             // Promo is looking at it's own profile
+            userStatisticsType = .bookings
             lblName.text = "\(user.name) (You)"
             lblPin.isHidden = false
             viewBottom.isHidden = false
             btnEditUser.isHidden = false
             btnLogOut.isHidden = false
-            viewPromoMonthly.isHidden = false
             viewFavoritesLegend.isHidden = true
             lblPromoMin.isHidden = false
             showAllVisitsAboveMinimumForSelectedMonth()
@@ -122,15 +140,25 @@ extension UserViewController {
         }
         else if user.type == .promo, !UserService.shared.isCurrentUser(thisUser: user) {
             // Promo is looking at another Promo profile
-            lblName.text = user.name
             lblPin.isHidden = true
             viewBottom.isHidden = true
             lblPromoMin.isHidden = true
             lblPin.isHidden = true
+            btnDeleteUser.isHidden = true
+        }
+        // Promo looking at Master
+        else if user.type == .master {
+            btnBookings.isHidden = true
+            btnFavorites.isHidden = true
+            btnLogOut.isHidden = true
+            btnAddUser.isHidden = true
+            btnEditUser.isHidden = true
+            btnDeleteUser.isHidden = true
+            lblPin.isHidden = true
+            lblPromoMin.isHidden = true
         }
         else {
             // Promo is looking at a Guest profile
-            lblName.text = user.name
             lblPin.isHidden = true
             viewBottom.isHidden = false
             btnEditUser.isHidden = false
@@ -144,23 +172,6 @@ extension UserViewController {
         }
     }
     
-    private func setupStatistics() {
-        guard
-            let visitCount = user?.visits?.count,
-            let total = user?.getTotalSum(),
-            visitCount > 0
-        else {
-            viewBottom.isHidden = true
-            btnDeleteUser.isHidden = false
-            return
-        }
-        btnDeleteUser.isHidden = true
-        let average = total / Double(visitCount)
-        lblTotal.text = "Total:\n \(total.formatDigits() ?? "0") rsd"
-        lblVisits.text = "Visits:\n \(visitCount)"
-        lblAverage.text = "Average:\n \(average.formatDigits() ?? "0") rsd"
-    }
-    
     func showFavoritesSection() {
         setActive(button: btnFavorites)
         reloadTableViewData(type: .favorites)
@@ -171,7 +182,6 @@ extension UserViewController {
     func showVisitsSection() {
         setActive(button: btnBookings)
         reloadTableViewData(type: .bookings)
-        viewPromoMonthly.isHidden = false
         viewFavoritesLegend.isHidden = true
     }
     private func setActive(button: UIButton) {
@@ -185,6 +195,23 @@ extension UserViewController {
         btnBookings.backgroundColor = .darkGray
         btnFavorites.tintColor = .darkGray
         btnBookings.tintColor = .darkGray
+    }
+    
+    private func setupStatistics() {
+        guard
+            let visitCount = user?.getTotalVisitAboveMinCount(),
+            let total = user?.getTotalSum(),
+            visitCount > 0
+        else {
+            viewBottom.isHidden = true
+            btnDeleteUser.isHidden = false
+            return
+        }
+        btnDeleteUser.isHidden = true
+        let average = total / Double(visitCount)
+        lblTotal.text = "Total:\n \(total.formatDigits() ?? "0") rsd"
+        lblVisits.text = "Visits:\n \(visitCount)"
+        lblAverage.text = "Average:\n \(average.formatDigits() ?? "0") rsd"
     }
     
     func showAllVisitsAboveMinimumForSelectedMonth() {

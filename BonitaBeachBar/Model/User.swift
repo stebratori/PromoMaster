@@ -21,11 +21,22 @@ class User {
         guard let visits = visits else { return 0 }
         var total: Double = 0.0
         for visit in visits {
-            if let bill = visit.bill {
+            if let bill = visit.bill, bill.total > LocalData.shared.promoMin {
                 total += bill.total
             }
         }
         return total
+    }
+    
+    func getTotalVisitAboveMinCount() -> Int {
+        guard let visits = visits else { return 0 }
+        var counter: Int = 0
+        for visit in visits {
+            if let bill = visit.bill, bill.total > LocalData.shared.promoMin {
+                counter += 1
+            }
+        }
+        return counter
     }
     
     func getMonthlySum(month: Int, year: Int) -> Double {
@@ -63,7 +74,10 @@ class User {
     private func populateVisitsForGuest() {
         guard let allVisits = LocalData.shared.allVisits else { return }
         for visit in allVisits {
-            if let guestId = visit.guest?.id {
+            
+            if let guestId = visit.guest?.id,
+               let billTotal = visit.bill?.total,
+               billTotal > LocalData.shared.promoMin {
                 if guestId == self.id {
                     if visits == nil { visits = [] }
                     visits?.append(visit)
@@ -75,7 +89,9 @@ class User {
     private func populateVisitsForPromo() {
         guard let allVisits = LocalData.shared.allVisits else { return }
         for visit in allVisits {
-            if let guestId = visit.promo?.id {
+            if let guestId = visit.promo?.id,
+               let billTotal = visit.bill?.total,
+               billTotal > LocalData.shared.promoMin {
                 if guestId == self.id {
                     if visits == nil { visits = [] }
                     visits?.append(visit)
@@ -173,6 +189,31 @@ class User {
         }
         return monthlyVisits
     }
+    
+    func favorites() -> [StavkaRacuna] {
+        guard let visits = visits else { return [] }
+        var favorites: [StavkaRacuna] = []
+        for visit in visits {
+            if let billItems = visit.bill?.billItems {
+                for billItem in billItems {
+                    var itemAlreadyInFavorites: Bool = false
+                    for (index, favorite) in favorites.enumerated() {
+                        if favorite.name == billItem.name {
+                            var editedFavorite = favorite
+                            editedFavorite.count += billItem.count
+                            favorites[index] = editedFavorite
+                            itemAlreadyInFavorites = true
+                            break
+                        }
+                    }
+                    if !itemAlreadyInFavorites {
+                        favorites.append(billItem)
+                    }
+                }
+            }
+        }
+        return favorites.sorted(by: { $0.price * Double($0.count) > $1.price * Double($1.count) })
+    }
 }
 
 enum UserType: String {
@@ -192,7 +233,7 @@ enum UserType: String {
         switch self {
         case .guest: return "Guest"
         case .promo: return "Promo"
-        case .master: return "Master"
+        case .master: return "Manager"
         }
     }
     
@@ -200,7 +241,7 @@ enum UserType: String {
         switch self {
         case .guest: return "Guest"
         case .promo: return "Promo"
-        case .master: return "Master"
+        case .master: return "Manager"
         }
     }
 }

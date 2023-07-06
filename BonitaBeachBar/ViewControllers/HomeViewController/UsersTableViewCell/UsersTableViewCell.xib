@@ -18,45 +18,52 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ee2-hX-HJL">
-                        <rect key="frame" x="0.0" y="8" width="320" height="65"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="81"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="cnY-a5-S6W">
-                                <rect key="frame" x="12" y="0.0" width="260" height="65"/>
+                                <rect key="frame" x="12" y="0.0" width="260" height="81"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Petar Petrovic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="W6Y-Bx-NDM">
-                                        <rect key="frame" x="0.0" y="0.0" width="260" height="32.666666666666664"/>
-                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="19"/>
-                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="260" height="27"/>
+                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="21"/>
+                                        <color key="textColor" red="0.75686274509999996" green="0.60392156860000001" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Broj poseta: 12  |  Total: 12.300" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="bPh-lv-6mg">
-                                        <rect key="frame" x="0.0" y="32.666666666666657" width="260" height="32.333333333333343"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Visits: 12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="bPh-lv-6mg">
+                                        <rect key="frame" x="0.0" y="27" width="260" height="27"/>
+                                        <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="17"/>
+                                        <color key="textColor" red="0.87843137250000003" green="0.80000000000000004" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorite: Mojito" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="zeZ-Ap-anb">
+                                        <rect key="frame" x="0.0" y="54" width="260" height="27"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
+                                        <color key="textColor" red="0.87843137250000003" green="0.80000000000000004" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fmh-Sf-gMG">
-                                <rect key="frame" x="280" y="0.0" width="30" height="65"/>
+                                <rect key="frame" x="280" y="0.0" width="30" height="81"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowHead.png" translatesAutoresizingMaskIntoConstraints="NO" id="RWT-rP-402">
-                                        <rect key="frame" x="7.6666666666666856" y="25" width="15" height="15"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowshape.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="VjP-al-agx">
+                                        <rect key="frame" x="2.6666666666666856" y="29.666666666666664" width="25" height="22.000000000000007"/>
+                                        <color key="tintColor" red="0.75686274509999996" green="0.60392156860000001" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="15" id="0BW-Z6-VZW"/>
-                                            <constraint firstAttribute="height" constant="15" id="cxE-br-VEJ"/>
+                                            <constraint firstAttribute="width" constant="25" id="jf8-J1-Jii"/>
+                                            <constraint firstAttribute="height" constant="25" id="lWP-vY-65s"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="RWT-rP-402" firstAttribute="centerY" secondItem="fmh-Sf-gMG" secondAttribute="centerY" id="DcJ-dp-ZL7"/>
-                                    <constraint firstItem="RWT-rP-402" firstAttribute="centerX" secondItem="fmh-Sf-gMG" secondAttribute="centerX" id="Sls-1A-Eca"/>
+                                    <constraint firstItem="VjP-al-agx" firstAttribute="centerX" secondItem="fmh-Sf-gMG" secondAttribute="centerX" id="WLc-1L-3nb"/>
+                                    <constraint firstItem="VjP-al-agx" firstAttribute="centerY" secondItem="fmh-Sf-gMG" secondAttribute="centerY" id="b9Z-F3-lVu"/>
                                     <constraint firstAttribute="width" constant="30" id="iCL-FB-aFR"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.79103142019999995" green="0.72108852859999995" blue="0.54537183050000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="fmh-Sf-gMG" secondAttribute="trailing" constant="10" id="572-ec-EjD"/>
                             <constraint firstAttribute="bottom" secondItem="cnY-a5-S6W" secondAttribute="bottom" id="N05-6X-VdO"/>
@@ -69,8 +76,8 @@
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="ee2-hX-HJL" secondAttribute="bottom" constant="8" id="HM0-Dl-gfo"/>
-                    <constraint firstItem="ee2-hX-HJL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="Rxh-lw-yYO"/>
+                    <constraint firstAttribute="bottom" secondItem="ee2-hX-HJL" secondAttribute="bottom" id="HM0-Dl-gfo"/>
+                    <constraint firstItem="ee2-hX-HJL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Rxh-lw-yYO"/>
                     <constraint firstAttribute="trailing" secondItem="ee2-hX-HJL" secondAttribute="trailing" id="jBv-Oj-r7W"/>
                     <constraint firstItem="ee2-hX-HJL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="k5u-48-JOR"/>
                 </constraints>
@@ -79,13 +86,14 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="background" destination="ee2-hX-HJL" id="xTe-cm-e4S"/>
+                <outlet property="lblFavorite" destination="zeZ-Ap-anb" id="CD1-F8-hnZ"/>
                 <outlet property="lblName" destination="W6Y-Bx-NDM" id="mSg-o3-xtI"/>
-                <outlet property="lblSubtext" destination="bPh-lv-6mg" id="erU-Qe-UIU"/>
+                <outlet property="lblVisits" destination="bPh-lv-6mg" id="aAV-3b-ifG"/>
             </connections>
             <point key="canvasLocation" x="138.93129770992365" y="33.450704225352112"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="arrowHead.png" width="24" height="24"/>
+        <image name="arrowshape.right" catalog="system" width="128" height="104"/>
     </resources>
 </document>

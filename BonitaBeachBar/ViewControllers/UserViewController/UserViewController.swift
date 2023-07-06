@@ -100,6 +100,13 @@ class UserViewController: UIViewController {
         if let phone = txtPhone.text {
             newUser.phone = phone
         }
+        if let promoMinText = txtPromoMin.text,
+            let promoMin = Double(promoMinText),
+            LocalData.shared.promoMin != promoMin {
+            firebaseService.setPromoMin(promoMin: promoMin) { success in
+                self.firebaseService.realtimePromoMinIncrease()
+            }
+        }
         firebaseService.addUser(user: newUser) { success in
             if success {
                 self.firebaseService.realtimeAddUser(user: newUser)

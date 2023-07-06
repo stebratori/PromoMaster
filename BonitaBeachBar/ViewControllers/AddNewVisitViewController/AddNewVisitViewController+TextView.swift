@@ -63,8 +63,6 @@ extension AddNewVisitViewController: UITextFieldDelegate {
             let allPromo = LocalData.shared.allPromo,
             let allTables = LocalData.shared.tables
         else { return }
-        
-
         let tableViewFrame = CGRect(x: textViewOrigin.x,
                                     y: textViewOrigin.y + textField.frame.size.height,
                                     width: textField.frame.size.width,
@@ -94,4 +92,19 @@ extension AddNewVisitViewController: UITextFieldDelegate {
         view.bringSubviewToFront(tableView)
         tableViewSuggestions?.reloadData()
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+}
+
+extension AddNewVisitViewController: UITextViewDelegate {
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+            if(text == "\n") {
+                textView.resignFirstResponder()
+                return false
+            }
+            return true
+        }
 }

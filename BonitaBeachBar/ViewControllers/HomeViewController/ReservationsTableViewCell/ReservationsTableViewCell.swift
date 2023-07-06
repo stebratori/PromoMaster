@@ -14,7 +14,8 @@ class ReservationsTableViewCell: UITableViewCell {
     @IBOutlet weak var lblTableNumber: UILabel!
     @IBOutlet weak var lblPromoName: UILabel!
     @IBOutlet weak var viewBookedBy: UIView!
-    @IBOutlet weak var imgComment: UIImageView!
+    @IBOutlet weak var imgComment: UIView!
+    @IBOutlet weak var imgGetMoney: UIImageView!
     var reservation: Reservation?
     
     func setupView(reservation: Reservation) {
@@ -29,10 +30,18 @@ class ReservationsTableViewCell: UITableViewCell {
         } else {
             viewBookedBy.isHidden = true
         }
-        if let comment = reservation.comment, comment.count > 0 {
-            imgComment.isHidden = false
-        } else {
+        if let reservationDate = reservation.date.toDate(),
+            reservationDate.isEearlier(thanDate: Date()) {
+            imgGetMoney.isHidden = false
             imgComment.isHidden = true
+        } else {
+            imgGetMoney.isHidden = true
+            if let comment = reservation.comment, comment.count > 0 {
+                imgComment.isHidden = false
+            } else {
+                imgComment.isHidden = true
+            }
         }
+        
     }
 }

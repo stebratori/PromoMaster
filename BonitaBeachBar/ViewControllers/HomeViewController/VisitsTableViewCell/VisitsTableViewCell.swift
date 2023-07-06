@@ -13,16 +13,27 @@ class VisitsTableViewCell: UITableViewCell {
     @IBOutlet weak var lblPromoName: UILabel!
     @IBOutlet weak var lblDate: UILabel!
     @IBOutlet weak var lblTotal: UILabel!
+    @IBOutlet weak var lblFavorites: UILabel!
     var visit: Visit?
 
     func setupView(visit: Visit) {
-        background.cornerRadius()
         guard let guest = visit.guest, let bill = visit.bill else { return }
         lblGuestName.text = guest.name
-        lblTotal.text =  bill.total.formatDigits()
-        lblDate.text = visit.date
+        lblTotal.text =  "Total: \(bill.total.formatDigits() ?? "0") rsd"
+        lblDate.text = "Date: \(visit.date)"
         if let promo = visit.promo {
-            lblPromoName.text = promo.name
+            lblPromoName.text = "Booked by: \(promo.name)"
         }
+        var counter = 3
+        var favText: String = ""
+        for stavka in visit.favorites() {
+            if counter > 0 {
+                favText += "\(stavka.name) "
+                counter -= 1
+            } else {
+                break
+            }
+        }
+        lblFavorites.text = favText
     }
 }

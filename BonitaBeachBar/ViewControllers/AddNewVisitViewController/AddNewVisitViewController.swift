@@ -15,9 +15,12 @@ class AddNewVisitViewController: UIViewController {
     @IBOutlet weak var txtGuest: UITextField!
     @IBOutlet weak var txtPromo: UITextField!
     @IBOutlet weak var txtTable: UITextField!
+    @IBOutlet weak var txtComment: UITextView!
     @IBOutlet weak var txtTotal: UITextField!
     @IBOutlet weak var lblDate: UILabel!
     @IBOutlet weak var viewBottom: UIView!
+    @IBOutlet weak var viewComment: UIView!
+    @IBOutlet weak var viewTap: UIView!
     
     @IBOutlet weak var btnAddVisit: UIButton!
     @IBOutlet weak var loader: UIActivityIndicatorView!
@@ -39,15 +42,18 @@ class AddNewVisitViewController: UIViewController {
     var tableViewSuggestionsDataSource: [Any] = []
     var tableViewSuggestionsDataSourceFiltered: [Any] = []
     let firebase: FirebaseService = FirebaseService()
-
+    @IBOutlet weak var btnDelete: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewTap.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(hideKeyboard)))
         tableView.register(UINib.init(nibName: "BillTableViewCell", bundle: nil), forCellReuseIdentifier: "BillTableViewCell")
         if let reservation = reservation {
             setupViewForReservation(reservation: reservation)
-        } else {
-            readOnly ? setupViewForReadOnly() : setupTextViewTapRecognisers()
+        } else if readOnly {
+             setupViewForReadOnly()
         }
+        setupTextViewTapRecognisers()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -58,10 +64,20 @@ class AddNewVisitViewController: UIViewController {
         }
     }
     
+    @objc
+    func hideKeyboard() {
+        txtGuest.resignFirstResponder()
+        txtPromo.resignFirstResponder()
+        txtComment.resignFirstResponder()
+        txtTable.resignFirstResponder()
+        removeSuggestionsTableView()
+    }
+    
     func setupTextViewTapRecognisers() {
         txtGuest.delegate = self
         txtPromo.delegate = self
         txtTable.delegate = self
+        txtComment.delegate = self
         txtGuest.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         txtPromo.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         txtTable.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
@@ -78,6 +94,9 @@ class AddNewVisitViewController: UIViewController {
         btnAddVisit.cornerRadius()
         btnAddBill.cornerRadius()
         datePicker.cornerRadius()
+        btnDelete.cornerRadius()
+        viewComment.cornerRadius()
+        txtComment.cornerRadius()
         txtTotal.isEnabled = false
         tableView.reloadData()
     }
@@ -88,12 +107,14 @@ class AddNewVisitViewController: UIViewController {
         btnAddPromo.isHidden = true
         btnAddGuest.isHidden = true
         viewFooter.isHidden = true
-        lblDate.text = "Date: \(visit.date)"
         txtGuest.isEnabled = false
         txtPromo.isEnabled = false
         txtTable.isEnabled = false
         txtTotal.isEnabled = false
         datePicker.minimumDate = Date()
+        
+        lblDate.text = "Date: \(visit.date)"
+        
         if let guestName = visit.guest?.name {
             txtGuest.text = "Guest: \(guestName)"
         }
@@ -117,6 +138,7 @@ class AddNewVisitViewController: UIViewController {
         datePicker.isHidden = true
         lblDate.text = "Date: \(reservation.date)"
         lblDate.textAlignment = .left
+        btnDelete.isHidden = false
         if let promo = reservation.promo {
             self.promo = promo
             txtPromo.text = "Promo: \(promo.name)"
@@ -126,6 +148,9 @@ class AddNewVisitViewController: UIViewController {
         if let table = reservation.table {
             txtTable.text = "Table: \(table)"
             txtTable.isEnabled = false
+        }
+        if let comment = reservation.comment {
+            txtComment.text = comment
         }
         self.guest = reservation.guest
         txtGuest.text = "Guest: \(reservation.guest.name)"
@@ -156,13 +181,49 @@ class AddNewVisitViewController: UIViewController {
         }
     }
     
+    @IBAction func actionDelete(_ sender: UIButton) {
+        guard let reservation = reservation else { return }
+        btnDelete.isEnabled = false
+        btnAddVisit.isEnabled = false
+        loader.isHidden = false
+        firebase.deleteReservation(reservation: reservation) { success in
+            self.firebase.realtimeReservationChange()
+            self.performSegue(withIdentifier: "unwindHomeFromVisit", sender: self)
+        }
+    }
+    
     @IBAction func addVisit(_ sender: UIButton) {
         loader.isHidden = false
         btnAddVisit.isEnabled = false
-        guard
-            let billItems = self.billItems,
-            let guest = self.guest
-        else {
+        // Check if Guest is added
+        guard let guest = guest else {
+            txtGuest.layer.borderColor = UIColor.red.cgColor
+            txtGuest.layer.borderWidth = 1
+            txtGuest.becomeFirstResponder()
+            self.loader.isHidden = true
+            self.btnAddVisit.isEnabled = true
+            return
+        }
+        
+        // Check if Bill Items are added
+        guard let billItems = self.billItems else {
+            btnAddBill.layer.borderColor = UIColor.red.cgColor
+            btnAddBill.layer.borderWidth = 1
+            self.loader.isHidden = true
+            self.btnAddVisit.isEnabled = true
+            return
+        }
+        
+        var tableNumber: String = "-"
+        if let table = reservation?.table {
+            tableNumber = table
+        }
+        else if let table = self.table?.number {
+            tableNumber = table
+        } else {
+            txtTable.layer.borderColor = UIColor.red.cgColor
+            txtTable.layer.borderWidth = 1
+            txtTable.becomeFirstResponder()
             self.loader.isHidden = true
             self.btnAddVisit.isEnabled = true
             return
@@ -172,12 +233,13 @@ class AddNewVisitViewController: UIViewController {
                         date: date,
                         billItems: billItems,
                         total: getBillTotal())
-        let visit = Visit(id: UUID().uuidString.lowercased(),
+        var visit = Visit(id: UUID().uuidString.lowercased(),
                       date: date,
                       guest: guest,
                       promo: promo,
                       bill: bill,
-                      table: table ?? Table(number: "-"))
+                      table: Table(number: tableNumber))
+        visit.comment = txtComment.text
         firebase.addVisit(visit: visit) { success in
             if success {
                 self.firebase.realtimeVisitIncrease()
@@ -209,17 +271,20 @@ class AddNewVisitViewController: UIViewController {
         self.promo = promo
         txtPromo.text = "Promo: \(promo.name)"
         txtPromo.resignFirstResponder()
+        txtPromo.layer.borderWidth = 0
     }
     
     func setTable(table: Table) {
         self.table = table
         txtTable.text = "Table: \(table.number)"
         txtTable.resignFirstResponder()
+        txtTable.layer.borderWidth = 0
     }
     
     func setBill() {
         txtTotal.text = "Total: \(getBillTotal().formatted()) rsd"
         btnAddBill.setTitle("Edit Bill", for: .normal)
+        btnAddBill.layer.borderWidth = 0
         viewBottom.isHidden = false
     }
     

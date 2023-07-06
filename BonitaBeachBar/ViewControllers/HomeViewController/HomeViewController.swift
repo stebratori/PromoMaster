@@ -34,38 +34,26 @@ class HomeViewController: UIViewController {
     var preFilteredDataSource: [Any] = []
     let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
     var firebaseService: FirebaseService = FirebaseService()
+    var showTodaysReservations: Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.delegate = self
+        setupView()
         subscribeToMyNotifications()
-        getReservationDatesAndShowReservations()
         firebaseService.setupListeners()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationItem.hidesBackButton = true
-        setupView()
-        refreshTableViewData()
-        setPreviousBookingsNotificationIfNeeded()
         navigationController?.setNavigationBarHidden(true, animated: animated)
+        refreshTableViewData()
     }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
-    }
-    
-    func getReservationDatesAndShowReservations() {
-        allReservationDates = LocalData.shared.getAllReservationDates()
-        if let weHaveReservationsForToday = LocalData.shared.getReservationsForDate(date: Date()),
-           weHaveReservationsForToday.count > 0 {
-            currentReservationsDate = Date()
-        } else {
-            currentReservationsDate = allReservationDates?.last
-        }
-        showReservationsForSelectedDate()
     }
     
     // ADD
@@ -126,23 +114,26 @@ class HomeViewController: UIViewController {
     @IBAction func showMasterStaff(_ sender: UIButton) {
         dataType = .master
         refreshTableViewData()
-        
-        btnMasterStaff.backgroundColor = .black
-        btnPromoStaff.backgroundColor = Constants.darkGrey
-        
-        btnMasterStaff.titleLabel?.textColor = Constants.yellowDark
-        btnPromoStaff.titleLabel?.textColor = Constants.yellowLight
+        selectMasterOrPromoTab(sender: sender)
     }
     
     @IBAction func showPromoStaff(_ sender: UIButton) {
         dataType = .promo
         refreshTableViewData()
-        
-        btnPromoStaff.backgroundColor = .black
-        btnMasterStaff.backgroundColor = Constants.darkGrey
-        
-        btnPromoStaff.titleLabel?.textColor = Constants.yellowDark
-        btnMasterStaff.titleLabel?.textColor = Constants.yellowLight
+        selectMasterOrPromoTab(sender: sender)
+    }
+    
+    func unselectTabsMasterPromo() {
+        btnPromoStaff.backgroundColor = Constants.inactiveButtonBackground
+        btnPromoStaff.titleLabel?.textColor = Constants.inactiveButtonTextColor
+        btnMasterStaff.backgroundColor = Constants.inactiveButtonBackground
+        btnMasterStaff.titleLabel?.textColor = Constants.inactiveButtonTextColor
+    }
+    
+    func selectMasterOrPromoTab(sender: UIButton) {
+        unselectTabsMasterPromo()
+        sender.backgroundColor = Constants.activeButtonBackground
+        sender.titleLabel?.textColor = Constants.activeButtonTextColor
     }
 }
 

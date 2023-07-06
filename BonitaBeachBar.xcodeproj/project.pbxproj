@@ -31,6 +31,7 @@
 		F13957012A42C19F00503605 /* UIDatePicker+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13957002A42C19F00503605 /* UIDatePicker+Extensions.swift */; };
 		F13957032A42E57800503605 /* ReservationViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13957022A42E57800503605 /* ReservationViewController+TableView.swift */; };
 		F13957062A42EADC00503605 /* ReservationViewController+TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13957052A42EADC00503605 /* ReservationViewController+TextView.swift */; };
+		F17E57B72A57215800FFC4CB /* imgGetMoney.png in Resources */ = {isa = PBXBuildFile; fileRef = F17E57B62A57215800FFC4CB /* imgGetMoney.png */; };
 		F193F40F2A226BBE0044DABE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193F40E2A226BBE0044DABE /* AppDelegate.swift */; };
 		F193F4112A226BBE0044DABE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193F4102A226BBE0044DABE /* SceneDelegate.swift */; };
 		F193F4162A226BBE0044DABE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F193F4142A226BBE0044DABE /* Main.storyboard */; };
@@ -120,6 +121,7 @@
 		F13957002A42C19F00503605 /* UIDatePicker+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDatePicker+Extensions.swift"; sourceTree = "<group>"; };
 		F13957022A42E57800503605 /* ReservationViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReservationViewController+TableView.swift"; sourceTree = "<group>"; };
 		F13957052A42EADC00503605 /* ReservationViewController+TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ReservationViewController+TextView.swift"; path = "../../../../../../../Applications/ReservationViewController+TextView.swift"; sourceTree = "<group>"; };
+		F17E57B62A57215800FFC4CB /* imgGetMoney.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imgGetMoney.png; sourceTree = "<group>"; };
 		F193F40B2A226BBE0044DABE /* BonitaBeachBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BonitaBeachBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F193F40E2A226BBE0044DABE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F193F4102A226BBE0044DABE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -242,6 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				F1AC3A132A3D225200944E33 /* imgCommentRightFull.png */,
+				F17E57B62A57215800FFC4CB /* imgGetMoney.png */,
 				F1AC3A082A3D0A8D00944E33 /* imgBonitaLetters.png */,
 				F11148AB2A31C8F6004CA5C1 /* arrowHead.png */,
 				F1AC3A172A3D22B300944E33 /* imgCommentRight.png */,
@@ -593,6 +596,7 @@
 				F1AC3A092A3D0A8D00944E33 /* imgBonitaLetters.png in Resources */,
 				F11148B12A31D8CB004CA5C1 /* VisitsTableViewCell.xib in Resources */,
 				F11148CA2A347D26004CA5C1 /* BonitaPopupView.xib in Resources */,
+				F17E57B72A57215800FFC4CB /* imgGetMoney.png in Resources */,
 				F11148AC2A31C8F6004CA5C1 /* arrowHead.png in Resources */,
 				F1AC3A182A3D22B300944E33 /* imgCommentRight.png in Resources */,
 				F1AC3A0D2A3D0CBB00944E33 /* imgLogoBonita.png in Resources */,

@@ -75,6 +75,14 @@ extension LocalData {
         return nil
     }
     
+    func getGuest(byName name: String?) -> User? {
+        guard let name = name, let allGuests = LocalData.shared.allGuests else { return nil }
+        for myGuest in allGuests where myGuest.name == name {
+            return myGuest
+        }
+        return nil
+    }
+    
     func getPromo(byId id: String) -> User? {
         guard let allPromo = LocalData.shared.allPromo else { return nil }
         for myPromo in allPromo where myPromo.id == id {

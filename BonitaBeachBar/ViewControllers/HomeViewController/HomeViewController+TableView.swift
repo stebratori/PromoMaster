@@ -22,8 +22,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch dataType {
-        case .history: return 107
         case .reservations: return 110
+        case .history: return 130
         default: return 81
         }
     }
@@ -139,25 +139,20 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         preFilteredDataSource = visits.sorted(by: { $0.bill?.total ?? 0 > $1.bill?.total ?? 0 })
         tableView.reloadData()
     }
-    
-    func showAllReservationsInTableView() {
-        setupReservationsDayAndDate()
-        tableView.reloadData()
-    }
 
+    
 
     func refreshTableViewData() {
         switch dataType {
         case .guests: showAllGuestsInTableView()
         case .promo: showAllPromoInTableView()
         case .master: showAllMasterInTableView()
-        case .reservations: showAllReservationsInTableView()
+        case .reservations: refreshDataAndShowReservations()
         case .history: showAllHistoryInTableView()
         }
         if let searchText = searchBar.text, searchText.count > 0 {
             showSearchResults(searchText: searchText)
         }
-        setPreviousBookingsNotificationIfNeeded()
     }
 }
 

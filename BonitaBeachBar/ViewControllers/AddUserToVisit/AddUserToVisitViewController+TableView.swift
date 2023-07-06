@@ -21,7 +21,7 @@ extension AddUserToVisitViewController: UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedUser = dataSource[indexPath.row]
-        performSegue(withIdentifier: "unwindToAddVisit", sender: self)
+        performSegue(withIdentifier: unwindSegueName, sender: self)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

@@ -31,10 +31,9 @@ extension UserViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let visits = user?.visits else { return }
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        if let vc = storyBoard.instantiateViewController(withIdentifier: "AddNewVisitViewController") as? AddNewVisitViewController {
-            let visit = visits[indexPath.row]
+        if let vc = storyBoard.instantiateViewController(withIdentifier: "AddNewVisitViewController") as? AddNewVisitViewController,
+           let visit = tableViewDataSource[indexPath.row] as? Visit {
             vc.readOnly = true
             vc.visit = visit
             self.navigationController?.pushViewController(vc, animated: true)
@@ -43,10 +42,9 @@ extension UserViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch userStatisticsType {
-        case .bookings: return 107
+        case .bookings: return 135
         case .favorites: return 50
         }
-        
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -64,41 +62,12 @@ extension UserViewController: UITableViewDelegate, UITableViewDataSource {
         userStatisticsType = type
         switch type {
         case .bookings:
-            tableViewDataSource = userVisits()
+            tableViewDataSource = user?.visits ?? []
             viewFavoritesLegend.isHidden = true
         case .favorites:
-            tableViewDataSource = userFavorites()
+            tableViewDataSource = user?.favorites() ?? []
             viewFavoritesLegend.isHidden = false
         }
         tableView.reloadData()
-    }
-    
-    private func userFavorites() -> [StavkaRacuna] {
-        guard let visits = user?.visits else { return [] }
-        var favorites: [StavkaRacuna] = []
-        for visit in visits {
-            if let billItems = visit.bill?.billItems {
-                for billItem in billItems {
-                    var itemAlreadyInFavorites: Bool = false
-                    for (index, favorite) in favorites.enumerated() {
-                        if favorite.name == billItem.name {
-                            var editedFavorite = favorite
-                            editedFavorite.count += billItem.count
-                            favorites[index] = editedFavorite
-                            itemAlreadyInFavorites = true
-                            break
-                        }
-                    }
-                    if !itemAlreadyInFavorites {
-                        favorites.append(billItem)
-                    }
-                }
-            }
-        }
-        return favorites.sorted(by: { $0.price * Double($0.count) > $1.price * Double($1.count) })
-    }
-    
-    private func userVisits() -> [Visit] {
-        return user?.visits ?? []
     }
 }

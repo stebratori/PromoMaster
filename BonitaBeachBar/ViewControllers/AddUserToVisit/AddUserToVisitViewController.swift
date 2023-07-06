@@ -16,6 +16,7 @@ class AddUserToVisitViewController: UIViewController {
     var dataSource: [User] = []
     let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
     var selectedUser: User?
+    var unwindSegueName: String = "unwindToAddVisit"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -91,7 +92,8 @@ class AddUserToVisitViewController: UIViewController {
                 }
             default: break
             }
-        } else if let vc = segue.destination as? ReservationViewController {
+        }
+        else if let vc = segue.destination as? ReservationViewController {
             switch userType {
             case .guest:
                 if let user = selectedUser {
